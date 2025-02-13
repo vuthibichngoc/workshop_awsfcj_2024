@@ -12,7 +12,7 @@ In this step, we will need to create an IAM User account to use for this lab exe
 
 **1.** In the AWS Management Console, search for the IAM service and select it.
 
-![IAM1](/images/2.prerequisite/2.1.1.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.1.png)
 
 **2.** In the IAM Dashboard, select Users from the left menu and then click Create user.
 
@@ -23,7 +23,7 @@ In this step, we will need to create an IAM User account to use for this lab exe
  - Choose **custom password** and enter the password for the account.
  - Optionally, you can require the user to create a new password when logging in, or not. Here, the user can log in directly without creating a new password.
  - Select Next.
-![IAM2](/images/2.prerequisite/2.1.2..png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.2..png)
 
 **4.** Attach the necessary permissions for the User.
 
@@ -33,12 +33,12 @@ In this step, we will need to create an IAM User account to use for this lab exe
 
 **5.** Review the information added.
 
-![IAM2](/images/2.prerequisite/2.1.3.png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.3.png)
 
 - Click **create user**.
 
 - The user has been successfully created, and you can download the CVS file with the user information.
 
-![IAM2](/images/2.prerequisite/2.1.4.png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.4.png)
 
 - You can use the URL link to log in and use the created account.

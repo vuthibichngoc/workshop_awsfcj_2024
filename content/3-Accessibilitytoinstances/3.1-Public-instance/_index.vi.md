@@ -9,7 +9,7 @@ pre : " <b> 3.1. </b> "
 
 **1.** Trong AWS Management Console, thực hiện tìm kiếm dịch vụ DynamoDB và chọn.
 
-![dy](/images/3.connect/3.1.1.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.1.png)
 
 - Chọn **Create table**.
 
@@ -21,10 +21,10 @@ pre : " <b> 3.1. </b> "
 
 - Chọn **Create table**
 
-![dy](/images/3.connect/3.1.2.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.2.png)
 
 - Bảng được tạo thành công
-![dy](/images/3.connect/3.1.3.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.3.png)
 
 {{%notice tip%}}
 Tên của bảng yêu cầu không được trùng.

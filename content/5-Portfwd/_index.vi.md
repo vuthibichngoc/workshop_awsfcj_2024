@@ -26,7 +26,7 @@ Phần này yêu cầu có tài khoản Snowflake, hãy chắc chắn rằng b�
 
 ``` USE DATABASE FCJ_STOCK_PRICES; ```
 
-![4](/images/5.fwd/5.1.1.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.1.png)
 
 - Tạo thành công **Database**.
 
@@ -38,7 +38,7 @@ Phần này yêu cầu có tài khoản Snowflake, hãy chắc chắn rằng b�
 
 ```
 
-![4](/images/5.fwd/5.1.2.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.2.png)
 
 {{% notice tip %}}
 Phần này bạn hãy quay lại AWS với tài khoản có quyền quản trị và lấy AWS_KEY_ID cùng với AWS_SECRET_KEY của tài khoản AWS đang lưu trữ **S3 Bucket** đã tạo từ bước trước để điền vào. 
@@ -67,7 +67,7 @@ CREATE OR REPLACE TABLE stock_prices(
 
 - Tạo thành công bảng trên **Snowflake**
 
-![4](/images/5.fwd/5.1.3.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.3.png)
 
 **5.** Thực hiện nạp dữ liệu vào bảng.
 
@@ -81,11 +81,11 @@ ON_ERROR = 'SKIP_FILE';
 ```
 - Thông báo thành công nạp dữ liệu vào bảng.
 
-![4](/images/5.fwd/5.1.4.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.4.png)
 
 - Sử dụng câu lệnh ``` SELECT * FROM stock_prices; ``` để xem dữ liệu đã nạp vào.
 
-![4](/images/5.fwd/5.1.5.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.5.png)
 
 - Dữ liệu đã được thêm vào bảng thành công.
 
@@ -108,9 +108,9 @@ Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ �
 - **Schedule expression**: ``` rate(1 day) ```
 - **Add**
 
-![4](/images/5.fwd/5.1.6.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png)
 
-![4](/images/5.fwd/5.1.7.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)
 
 {{% notice tip %}}
 Như vậy, dữ liệu sẽ được cập nhật và đưa vào DynamoDB cùng S3 một cách liên tục theo từng ngày.

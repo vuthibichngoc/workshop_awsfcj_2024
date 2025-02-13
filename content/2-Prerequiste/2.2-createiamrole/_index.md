@@ -16,7 +16,7 @@ In this section, we will create a Snowflake account using the free trial for the
 - Select: **Start for free**
 - Fill in the necessary information.
 - Select next.
-![sf](/images/2.prerequisite/2.2.1.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.1.png)
 
 - You can skip the remaining steps.
 
@@ -25,10 +25,10 @@ In this section, we will create a Snowflake account using the free trial for the
 After successfully creating the account, you will receive an email from Snowflake to the email you registered with.
 
 - Select **Click to activate**
-![sf](/images/2.prerequisite/2.2.2.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.2.png)
 
 - Fill in the necessary information.
-![sf](/images/2.prerequisite/2.2.5.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.5.png)
 
 - Successfully log in to the Snowflake homepage.
-![sf](/images/2.prerequisite/2.2.6.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.6.png)

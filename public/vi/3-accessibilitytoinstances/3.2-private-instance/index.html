@@ -12,21 +12,21 @@
     <title>Lưu dữ liệu vào DynamoDB :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739432457" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739434137" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739432457" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739434137" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739432457"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739434137"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -628,7 +628,7 @@
 	<h2 id="lưu-dữ-liệu-vào-dynamodb">Lưu dữ liệu vào DynamoDB</h2>
 <h3 id="tạo-lamdba-function">Tạo Lamdba function</h3>
 <p><strong>1.</strong> Trong AWS Management Console, thực hiện tìm kiếm dịch vụ Lambda và chọn.</p>
-<p><img src="/images/3.connect/3.2.1.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.1.png" alt="dy"></p>
 <p><strong>2.</strong> Tạo function trong Lambda</p>
 <ul>
 <li>Chọn <strong>Create function</strong></li>
@@ -637,7 +637,7 @@
 <li><strong>Architecture</strong>: x86_64</li>
 <li><strong>Create function</strong></li>
 </ul>
-<p><img src="/images/3.connect/3.2.2.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.2.png" alt="dy"></p>
 <h3 id="thiết-lập-lamdba-function">Thiết lập Lamdba function</h3>
 <p><strong>1.</strong> Thêm layer.</p>
 <ul>
@@ -646,7 +646,7 @@
 <li><strong>AWS layers</strong>: <code>AWSSDKPandas-Python310</code></li>
 <li><strong>Version</strong>: 23</li>
 </ul>
-<p><img src="/images/3.connect/3.2.3.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.3.png" alt="dy"></p>
 
 <div class="notices tip" ><p>Phần version hãy chọn version mới nhất.</p>
 </div>
@@ -662,30 +662,30 @@
 <li>Tại <strong>Configuration</strong> chọn <strong>Permisstions</strong> ở bên trái</li>
 <li>Chọn phần <strong>role name</strong>.</li>
 </ul>
-<p><img src="/images/3.connect/3.2.4.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.4.png" alt="dy"></p>
 <ul>
 <li>Tới phần <strong>Permissions</strong> có thể thấy <strong>Permissions policies</strong></li>
 <li>Chọn <strong>Add permissions</strong> - <strong>Attach policies</strong></li>
 <li>Thực hiện thêm quyền <strong>AmazonDynamoDBFullAccess</strong></li>
 <li>Chọn <strong>Add permissions</strong></li>
 </ul>
-<p><img src="/images/3.connect/3.2.5.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png" alt="dy"></p>
 <p><strong>4.</strong> Thực hiện đưa dữ liệu từ <a href="https://www.alphavantage.co/">Alphavantage</a> vào bảng đã tạo trong DynamoDB</p>
 <ul>
 <li>Đến phần <strong>Code</strong> ở thanh tùy chọn.</li>
-<li>Thêm đoạn <a href="/file/fetch_code.py">SourceCode</a> vào phần <strong>Code source</strong></li>
+<li>Thêm đoạn <a href="https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py">SourceCode</a> vào phần <strong>Code source</strong></li>
 <li>Chọn <strong>Test</strong> - <strong>Create new test event</strong> - điền các thông tin và chọn <strong>Save</strong></li>
 <li>Thực hiện chạy đoạn code.</li>
 <li><strong>Kết quả sau khi chạy</strong>.</li>
 </ul>
-<p><img src="/images/3.connect/3.2.6.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.6.png" alt="dy"></p>
 <h3 id="kết-quả-tại-dynamodb">Kết quả tại DynamoDB.</h3>
 <ul>
 <li>Truy cập vào <a href="https://us-east-1.console.aws.amazon.com/dynamodbv2/home?region=us-east-1#service">DynamoDB</a></li>
 <li>Chọn <strong>Tables</strong> ở thanh tùy chọn bên trái - Click chọn Tables đã tạo từ trước.</li>
 <li>Tại bảng đã tạo từ trước, chọn <strong>Explore table items</strong> - Chọn nút <strong>Run</strong></li>
 </ul>
-<p><img src="/images/3.connect/3.2.7.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.7.png" alt="dy"></p>
 <ul>
 <li>Kết quả đã được đưa xuống từ trang web <a href="https://www.alphavantage.co/">Alphavantage</a> và lưu vào bảng <strong>stock_prices</strong> đã tạo từ trước ở <strong>DynamoDB</strong></li>
 </ul>
@@ -955,19 +955,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739432457"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739434137"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739432457"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739434137"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739432457" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739432457"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739434137" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739434137"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

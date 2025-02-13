@@ -12,7 +12,7 @@ Trong bước này, chúng ta sẽ cần tạo một tài khoản IAM User để
 
 **1.** Trong AWS Management Console, thực hiện tìm kiếm dịch vụ IAM và chọn.
 
-![IAM1](/images/2.prerequisite/2.1.1.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.1.png)
 
 **2.** Trong IAM Dashboard, chọn Users từ menu bên trái và sau đó chọn Create user.
 
@@ -24,7 +24,7 @@ Trong bước này, chúng ta sẽ cần tạo một tài khoản IAM User để
  - Chọn custom password và nhập password cho tại khoản.
  - Tùy chọn có thể yêu cầu người dùng phải tạo mật khẩu mới khi đăng nhập hoặc không. Ở đây người dùng có thể đăng nhập vào luôn và không cần phải tạo lại mật khẩu.
  - Chọn Next.
-![IAM2](/images/2.prerequisite/2.1.2..png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.2..png)
 
 **4.** Gán thêm các quyền cần thiết cho User.
 
@@ -34,12 +34,12 @@ Trong bước này, chúng ta sẽ cần tạo một tài khoản IAM User để
 
 **5.** Xem lại các thông tin đã thêm vào.
 
-![IAM2](/images/2.prerequisite/2.1.3.png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.3.png)
 
 - Chọn **create user**.
 
 - Người dùng đã được tạo thành công, có thể tải file cvs thông tin người dùng.
 
-![IAM2](/images/2.prerequisite/2.1.4.png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.4.png)
 
 - Có thể sử dụng đường link URL để đăng nhập và sử dụng tài khoản đã tạo.

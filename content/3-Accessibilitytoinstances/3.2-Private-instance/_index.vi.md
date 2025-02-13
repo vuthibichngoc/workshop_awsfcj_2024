@@ -11,7 +11,7 @@ pre : " <b> 3.2. </b> "
 
 **1.** Trong AWS Management Console, thực hiện tìm kiếm dịch vụ Lambda và chọn.
 
-![dy](/images/3.connect/3.2.1.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.1.png)
 
 **2.** Tạo function trong Lambda
 
@@ -21,7 +21,7 @@ pre : " <b> 3.2. </b> "
 - **Architecture**: x86_64
 - **Create function**
 
-![dy](/images/3.connect/3.2.2.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.2.png)
 
 ### Thiết lập Lamdba function
 
@@ -32,7 +32,7 @@ pre : " <b> 3.2. </b> "
 - **AWS layers**: ``` AWSSDKPandas-Python310 ```
 - **Version**: 23
 
-![dy](/images/3.connect/3.2.3.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.3.png)
 
 {{%notice tip%}}
 Phần version hãy chọn version mới nhất.
@@ -49,24 +49,24 @@ Phần version hãy chọn version mới nhất.
 - Tại **Configuration** chọn **Permisstions** ở bên trái
 - Chọn phần **role name**.
 
-![dy](/images/3.connect/3.2.4.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.4.png)
 
 - Tới phần **Permissions** có thể thấy **Permissions policies**
 - Chọn **Add permissions** - **Attach policies**
 - Thực hiện thêm quyền **AmazonDynamoDBFullAccess** 
 - Chọn **Add permissions**
 
-![dy](/images/3.connect/3.2.5.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png)
 
 **4.** Thực hiện đưa dữ liệu từ [Alphavantage](https://www.alphavantage.co/) vào bảng đã tạo trong DynamoDB
 
 - Đến phần **Code** ở thanh tùy chọn.
-- Thêm đoạn [SourceCode](/file/fetch_code.py) vào phần **Code source** 
+- Thêm đoạn [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) vào phần **Code source** 
 - Chọn **Test** - **Create new test event** - điền các thông tin và chọn **Save**
 - Thực hiện chạy đoạn code.
 - **Kết quả sau khi chạy**.
 
-![dy](/images/3.connect/3.2.6.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.6.png)
 
 ### Kết quả tại DynamoDB.
 
@@ -74,6 +74,6 @@ Phần version hãy chọn version mới nhất.
 - Chọn **Tables** ở thanh tùy chọn bên trái - Click chọn Tables đã tạo từ trước.
 - Tại bảng đã tạo từ trước, chọn **Explore table items** - Chọn nút **Run**
 
-![dy](/images/3.connect/3.2.7.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.7.png)
 
 - Kết quả đã được đưa xuống từ trang web [Alphavantage](https://www.alphavantage.co/) và lưu vào bảng **stock_prices** đã tạo từ trước ở **DynamoDB**

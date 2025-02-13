@@ -16,7 +16,7 @@ pre : " <b> 2.2 </b> "
 - Chọn: **Start for free**
 - Thực hiện điền các thông tin cần thiết.
 - Chọn next.
-![sf](/images/2.prerequisite/2.2.1.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.1.png)
 
 - Các bước sau cùng có thể chọn Skip.
 
@@ -25,10 +25,10 @@ pre : " <b> 2.2 </b> "
 Sau khi tạo tài khoản thành công sẽ có gmail của snowflake được gửi tới gmail đã dùng để đăng ký.
 
 - Chọn **Click to active**
-![sf](/images/2.prerequisite/2.2.2.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.2.png)
 
 - Điền các thông tin cần thiết.
-![sf](/images/2.prerequisite/2.2.5.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.5.png)
 
 - Đăng nhập thành công vào trang chủ của Snowflake
-![sf](/images/2.prerequisite/2.2.6.png)
+![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.6.png)

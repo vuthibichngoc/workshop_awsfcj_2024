@@ -10,7 +10,7 @@ pre : " <b> 4.1 </b> "
 
 **1.** Trong AWS Management Console, thực hiện tìm kiếm dịch vụ **S3** và chọn.
 
-![IAM1](/images/4.s3/4.1.1.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.1.png)
 
 **2.** Tạo S3 Bucket
 
@@ -20,7 +20,7 @@ pre : " <b> 4.1 </b> "
 - Chọn **Create bucket**
 - Tạo thành công.
 
-![IAM1](/images/4.s3/4.1.2.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.2.png)
 
 **3.** Thêm folder lưu trữ dữ liệu.
 
@@ -28,11 +28,11 @@ pre : " <b> 4.1 </b> "
 - **Folder name**: ``` snowflake ```
 - Chọn **Create folder**
 
-![IAM1](/images/4.s3/4.1.3.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.3.png)
 
 - Tạo foler thành công.
 
-![IAM1](/images/4.s3/4.1.4.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.4.png)
 
 {{%notice tip%}}
 Tên của S3 Bucket phải là duy nhất, nếu tên đã trùng hãy thử thêm chữ hoặc số ở phía sau.

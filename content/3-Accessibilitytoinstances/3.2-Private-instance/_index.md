@@ -11,7 +11,7 @@ pre : " <b> 3.2. </b> "
 
 **1.** In the AWS Management Console, search for the **Lambda** service and select it.
 
-![dy](/images/3.connect/3.2.1.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.1.png)
 
 **2.** Create a function in Lambda
 
@@ -21,7 +21,7 @@ pre : " <b> 3.2. </b> "
 - **Architecture**: x86_64
 - Click **Create function**
 
-![dy](/images/3.connect/3.2.2.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.2.png)
 
 ### Set Up Lambda Function
 
@@ -32,7 +32,7 @@ pre : " <b> 3.2. </b> "
 - **AWS layers**: `AWSSDKPandas-Python310`
 - **Version**: 23
 
-![dy](/images/3.connect/3.2.3.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.3.png)
 
 {{%notice tip%}}
 Select the latest version in the version section.
@@ -49,24 +49,24 @@ Select the latest version in the version section.
 - In the **Configuration** section, select **Permissions** on the left.
 - Click on the **role name**.
 
-![dy](/images/3.connect/3.2.4.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.4.png)
 
 - In the **Permissions** section, find **Permissions policies**.
 - Click **Add permissions** - **Attach policies**.
 - Add the permission **AmazonDynamoDBFullAccess**.
 - Click **Add permissions**.
 
-![dy](/images/3.connect/3.2.5.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png)
 
 **4.** Insert data from [Alphavantage](https://www.alphavantage.co/) into the table created in DynamoDB.
 
 - Go to the **Code** section in the options bar.
-- Add the [SourceCode](/file/fetch_code.py) in the **Code source** area.
+- Add the [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) in the **Code source** area.
 - Click **Test** - **Create new test event**, enter the necessary information, and click **Save**.
 - Execute the code.
 - **Result after execution**.
 
-![dy](/images/3.connect/3.2.6.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.6.png)
 
 ### Result in DynamoDB.
 
@@ -74,6 +74,6 @@ Select the latest version in the version section.
 - Select **Tables** in the left-hand options bar - Click the table you created earlier.
 - In the table, click **Explore table items** - Click the **Run** button.
 
-![dy](/images/3.connect/3.2.7.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.7.png)
 
 - The data has been fetched from [Alphavantage](https://www.alphavantage.co/) and stored in the **stock_prices** table created earlier in **DynamoDB**.

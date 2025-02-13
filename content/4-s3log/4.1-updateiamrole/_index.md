@@ -10,7 +10,7 @@ pre : " <b> 4.1 </b> "
 
 **1.** In the AWS Management Console, search for the **S3** service and select it.
 
-![IAM1](/images/4.s3/4.1.1.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.1.png)
 
 **2.** Create an S3 Bucket
 
@@ -20,7 +20,7 @@ pre : " <b> 4.1 </b> "
 - Click **Create bucket**
 - The bucket will be created successfully.
 
-![IAM1](/images/4.s3/4.1.2.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.2.png)
 
 **3.** Add a folder to store data.
 
@@ -28,11 +28,11 @@ pre : " <b> 4.1 </b> "
 - **Folder name**: ``` snowflake ```
 - Click **Create folder**
 
-![IAM1](/images/4.s3/4.1.3.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.3.png)
 
 - The folder is created successfully.
 
-![IAM1](/images/4.s3/4.1.4.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.4.png)
 
 {{%notice tip%}} 
 The name of the S3 bucket must be unique. If the name already exists, try adding a letter or number at the end.

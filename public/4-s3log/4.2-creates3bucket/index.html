@@ -12,21 +12,21 @@
     <title>Store Data into S3 Bucket :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739432457" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739432457" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739434137" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739432457" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739434137" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739432457"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739434137"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -628,7 +628,7 @@
 	<h2 id="save-data-to-s3-bucket">Save Data to S3 Bucket</h2>
 <h3 id="create-lambda-function">Create Lambda Function</h3>
 <p><strong>1.</strong> In the AWS Management Console, search for the <strong>Lambda</strong> service and select it.</p>
-<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.1.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.1.png" alt="dy"></p>
 <p><strong>2.</strong> Create a function in Lambda</p>
 <ul>
 <li>Select <strong>Create function</strong></li>
@@ -637,7 +637,7 @@
 <li><strong>Architecture</strong>: x86_64</li>
 <li>Click <strong>Create function</strong></li>
 </ul>
-<p><img src="/workshop_awsfcj_2024/images/4.s3/4.2.1.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.2.1.png" alt="dy"></p>
 <h3 id="set-up-lambda-function">Set Up Lambda Function</h3>
 <p><strong>1.</strong> Add a layer.</p>
 <ul>
@@ -646,7 +646,7 @@
 <li><strong>AWS layers</strong>: <code>AWSSDKPandas-Python310</code></li>
 <li><strong>Version</strong>: 23</li>
 </ul>
-<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.3.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.3.png" alt="dy"></p>
 
 <div class="notices tip" ><p>Make sure to choose the latest version.</p>
 </div>
@@ -656,14 +656,14 @@
 <li>In the <strong>Configuration</strong> section, select <strong>Permissions</strong> on the left</li>
 <li>Click on the <strong>role name</strong>.</li>
 </ul>
-<p><img src="/workshop_awsfcj_2024/images/4.s3/4.2.2.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.2.2.png" alt="dy"></p>
 <ul>
 <li>In the <strong>Permissions</strong> section, you should see <strong>Permissions policies</strong></li>
 <li>Click <strong>Add permissions</strong> → <strong>Attach policies</strong></li>
 <li>Add the <strong>AmazonDynamoDBFullAccess</strong>, <strong>AmazonS3FullAccess</strong> permissions</li>
 <li>Click <strong>Add permissions</strong></li>
 </ul>
-<p><img src="/workshop_awsfcj_2024/images/4.s3/4.2.3.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.2.3.png" alt="dy"></p>
 <p><strong>4.</strong> Add Trigger.</p>
 <ul>
 <li>In the <strong>Configuration</strong> section, select <strong>Trigger</strong> on the left.</li>
@@ -671,25 +671,25 @@
 <li>Search for <strong>DynamoDB</strong> and select it.</li>
 <li><strong>DynamoDB table</strong>: choose the table name created in <strong>DynamoDB</strong> from step 3.</li>
 </ul>
-<p><img src="/workshop_awsfcj_2024/images/4.s3/4.2.4.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.2.4.png" alt="dy"></p>
 <ul>
 <li>Click <strong>Add</strong></li>
 </ul>
 <p><strong>5.</strong> Fetch data from the <strong>stock_prices</strong> table in DynamoDB and save it to the <strong>S3 Bucket</strong> created.</p>
 <ul>
 <li>Go to the <strong>Code</strong> section in the options bar.</li>
-<li>Add the <a href="/workshop_awsfcj_2024/file/DTToSnowflake.py">SourceCode</a> to the <strong>Code source</strong></li>
+<li>Add the <a href="https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/DTToSnowflake.py">SourceCode</a> to the <strong>Code source</strong></li>
 <li>Click <strong>Test</strong> → <strong>Create new test event</strong> → fill in the required details and click <strong>Save</strong></li>
 <li>Run the code.</li>
 <li><strong>Result after running</strong>:</li>
 </ul>
-<p><img src="/workshop_awsfcj_2024/images/4.s3/4.1.5.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.5.png" alt="dy"></p>
 <h3 id="results-in-the-s3-bucket">Results in the S3 Bucket</h3>
 <ul>
 <li>Access the <a href="https://us-east-1.console.aws.amazon.com/s3/get-started?region=us-east-1&amp;bucketType=general">S3 Bucket</a></li>
 <li>In the left menu, click <strong>General purpose buckets</strong> → Select the previously created table → Navigate to the folder you created.</li>
 </ul>
-<p><img src="/workshop_awsfcj_2024/images/4.s3/4.2.6.png" alt="dy"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.2.6.png" alt="dy"></p>
 <ul>
 <li>Stock data has been processed into .csv files by the respective date and stored in the created <strong>S3 Bucket</strong>.</li>
 </ul>
@@ -959,19 +959,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739432457"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739434137"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739432457"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739432457"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739434137"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739432457" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739432457"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739434137" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739434137"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

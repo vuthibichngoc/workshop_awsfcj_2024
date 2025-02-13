@@ -30,7 +30,7 @@ CREATE DATABASE FCJ_STOCK_PRICES;
 USE DATABASE FCJ_STOCK_PRICES;
 ```
 
-![4](/images/5.fwd/5.1.1.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.1.png)  
 
 - The **Database** is successfully created.  
 
@@ -42,7 +42,7 @@ CREATE STAGE my_stage
   CREDENTIALS = (AWS_KEY_ID = '<<your aws key id>>' AWS_SECRET_KEY = 'your aws secret key'); 
 ```
 
-![4](/images/5.fwd/5.1.2.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.2.png)  
 
 {{% notice tip %}}  
 For this step, go back to AWS with an admin account and retrieve the `AWS_KEY_ID` and `AWS_SECRET_KEY` associated with the AWS account storing the **S3 Bucket** created in the previous step.  
@@ -69,7 +69,7 @@ CREATE OR REPLACE TABLE stock_prices(
 
 - The **stock_prices** table is successfully created in **Snowflake**.  
 
-![4](/images/5.fwd/5.1.3.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.3.png)  
 
 **5.** Load data into the table  
 
@@ -84,11 +84,11 @@ ON_ERROR = 'SKIP_FILE';
 
 - Data loading is successful.  
 
-![4](/images/5.fwd/5.1.4.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.4.png)  
 
 - Use the command `SELECT * FROM stock_prices;` to verify the data.  
 
-![4](/images/5.fwd/5.1.5.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.5.png)  
 
 - The data has been successfully loaded into the table.  
 
@@ -111,9 +111,9 @@ Next, we will configure **EventBridge** to continuously update data in **S3 Buck
 - **Schedule expression**: `rate(1 day)`  
 - Click **Add**  
 
-![4](/images/5.fwd/5.1.6.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png)  
 
-![4](/images/5.fwd/5.1.7.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)  
 
 {{% notice tip %}}  
 With this setup, data will be continuously updated and inserted into **DynamoDB** and **S3** on a daily basis.  

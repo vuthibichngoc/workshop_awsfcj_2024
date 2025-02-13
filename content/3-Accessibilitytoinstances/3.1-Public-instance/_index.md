@@ -10,7 +10,7 @@ pre : " <b> 3.1. </b> "
 
 **1.** In the AWS Management Console, search for the **DynamoDB** service and select it.
 
-![dy](/images/3.connect/3.1.1.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.1.png)
 
 - Click **Create table**.
 
@@ -22,10 +22,10 @@ pre : " <b> 3.1. </b> "
 
 - Click **Create table**.
 
-![dy](/images/3.connect/3.1.2.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.2.png)
 
 - The table has been successfully created.
-![dy](/images/3.connect/3.1.3.png)
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.3.png)
 
 {{%notice tip%}}
 The table name must be unique.
