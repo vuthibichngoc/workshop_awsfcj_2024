@@ -628,7 +628,7 @@
 	<h2 id="storing-data-into-dynamodb">Storing Data into DynamoDB</h2>
 <h3 id="create-lambda-function">Create Lambda Function</h3>
 <p><strong>1.</strong> In the AWS Management Console, search for the <strong>Lambda</strong> service and select it.</p>
-<p><img src="/images/3.connect/3.2.1.png" alt="dy"></p>
+<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.1.png" alt="dy"></p>
 <p><strong>2.</strong> Create a function in Lambda</p>
 <ul>
 <li>Click <strong>Create function</strong></li>
@@ -637,7 +637,7 @@
 <li><strong>Architecture</strong>: x86_64</li>
 <li>Click <strong>Create function</strong></li>
 </ul>
-<p><img src="/images/3.connect/3.2.2.png" alt="dy"></p>
+<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.2.png" alt="dy"></p>
 <h3 id="set-up-lambda-function">Set Up Lambda Function</h3>
 <p><strong>1.</strong> Add a layer.</p>
 <ul>
@@ -646,7 +646,7 @@
 <li><strong>AWS layers</strong>: <code>AWSSDKPandas-Python310</code></li>
 <li><strong>Version</strong>: 23</li>
 </ul>
-<p><img src="/images/3.connect/3.2.3.png" alt="dy"></p>
+<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.3.png" alt="dy"></p>
 
 <div class="notices tip" ><p>Select the latest version in the version section.</p>
 </div>
@@ -662,30 +662,30 @@
 <li>In the <strong>Configuration</strong> section, select <strong>Permissions</strong> on the left.</li>
 <li>Click on the <strong>role name</strong>.</li>
 </ul>
-<p><img src="/images/3.connect/3.2.4.png" alt="dy"></p>
+<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.4.png" alt="dy"></p>
 <ul>
 <li>In the <strong>Permissions</strong> section, find <strong>Permissions policies</strong>.</li>
 <li>Click <strong>Add permissions</strong> - <strong>Attach policies</strong>.</li>
 <li>Add the permission <strong>AmazonDynamoDBFullAccess</strong>.</li>
 <li>Click <strong>Add permissions</strong>.</li>
 </ul>
-<p><img src="/images/3.connect/3.2.5.png" alt="dy"></p>
+<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.5.png" alt="dy"></p>
 <p><strong>4.</strong> Insert data from <a href="https://www.alphavantage.co/">Alphavantage</a> into the table created in DynamoDB.</p>
 <ul>
 <li>Go to the <strong>Code</strong> section in the options bar.</li>
-<li>Add the <a href="/file/fetch_code.py">SourceCode</a> in the <strong>Code source</strong> area.</li>
+<li>Add the <a href="/workshop_awsfcj_2024/file/fetch_code.py">SourceCode</a> in the <strong>Code source</strong> area.</li>
 <li>Click <strong>Test</strong> - <strong>Create new test event</strong>, enter the necessary information, and click <strong>Save</strong>.</li>
 <li>Execute the code.</li>
 <li><strong>Result after execution</strong>.</li>
 </ul>
-<p><img src="/images/3.connect/3.2.6.png" alt="dy"></p>
+<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.6.png" alt="dy"></p>
 <h3 id="result-in-dynamodb">Result in DynamoDB.</h3>
 <ul>
 <li>Go to <a href="https://us-east-1.console.aws.amazon.com/dynamodbv2/home?region=us-east-1#service">DynamoDB</a>.</li>
 <li>Select <strong>Tables</strong> in the left-hand options bar - Click the table you created earlier.</li>
 <li>In the table, click <strong>Explore table items</strong> - Click the <strong>Run</strong> button.</li>
 </ul>
-<p><img src="/images/3.connect/3.2.7.png" alt="dy"></p>
+<p><img src="/workshop_awsfcj_2024/images/3.connect/3.2.7.png" alt="dy"></p>
 <ul>
 <li>The data has been fetched from <a href="https://www.alphavantage.co/">Alphavantage</a> and stored in the <strong>stock_prices</strong> table created earlier in <strong>DynamoDB</strong>.</li>
 </ul>
