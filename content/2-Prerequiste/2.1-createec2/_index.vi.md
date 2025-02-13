@@ -30,10 +30,10 @@ Trong bước này, chúng ta sẽ cần tạo một tài khoản IAM User để
 **4.** Gán thêm các quyền cần thiết cho User.
 
 - Chọn **Attach policies directly**.
-- Chọn các quyền: **AmazonDynamoDBFullAccess**, **AmazonS3FullAccess**, **AWSLambda_FullAccess**, **AmazonEventBridgeFullAccess**, **IAMFullAccess**, **AmazonAthenaFullAccess**
+- Chọn các quyền: **AmazonDynamoDBFullAccess**, **AmazonS3FullAccess**, **AWSLambda_FullAccess**, **AmazonEventBridgeFullAccess**, **IAMFullAccess**.
 - Chọn **Next**.
 
-![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.6.png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.rep.png)
 
 **5.** Xem lại các thông tin đã thêm vào.
 

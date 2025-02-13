@@ -30,10 +30,10 @@ In this step, we will need to create an IAM User account to use for this lab exe
 **4.** Attach the necessary permissions for the User.
 
 - Select **Attach policies directly**.
-- Select the following permissions: **AmazonDynamoDBFullAccess**, **AmazonS3FullAccess**, **AWSLambda_FullAccess**, **AmazonEventBridgeFullAccess**, **IAMFullAccess**, **AmazonAthenaFullAccess**
+- Select the following permissions: **AmazonDynamoDBFullAccess**, **AmazonS3FullAccess**, **AWSLambda_FullAccess**, **AmazonEventBridgeFullAccess**, **IAMFullAccess**.
 - Select **Next**.
 
-![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.6.png)
+![IAM2](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.rep.png)
 
 **5.** Review the information added.
 
