@@ -8,21 +8,21 @@ pre : " <b> 2.2 </b> "
 
 ### Tạo tài khoản Snowflake
 
-Ở phần này sẽ thực hiện việc tạo 1 tài khoản Snowflake sử dụng miễn phí trong 30 ngày đầu tiên để phục vụ cho mục đích thực hiện bài thực hành này.
+Ở phần này sẽ thực hiện việc tạo 1 tài khoản **Snowflake** sử dụng miễn phí trong 30 ngày đầu tiên để phục vụ cho mục đích thực hiện bài thực hành này.
 
-**1.** Truy cập vào trang web của Snowflake
+**1.** Truy cập vào trang web của **Snowflake**
 
 - Truy cập theo đường link: [Snowflake](https://www.snowflake.com/en/)
 - Chọn: **Start for free**
 - Thực hiện điền các thông tin cần thiết.
-- Chọn next.
+- Chọn **Next**.
 ![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.1.png)
 
-- Các bước sau cùng có thể chọn Skip.
+- Các bước sau cùng có thể chọn **Skip**.
 
-**2.** Kiểm tra thông tin được gửi tới gmail.
+**2.** Kiểm tra thông tin được gửi tới **Gmail**.
 
-Sau khi tạo tài khoản thành công sẽ có gmail của snowflake được gửi tới gmail đã dùng để đăng ký.
+Sau khi tạo tài khoản thành công sẽ có gmail của Snowflake được gửi tới gmail đã dùng để đăng ký.
 
 - Chọn **Click to active**
 ![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.2.png)

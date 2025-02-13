@@ -16,7 +16,11 @@ In the previous section, we stored stock data as `.csv` files by date in an **S3
 
 **1.** Go to [Snowflake](https://app.snowflake.com/)  
 
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.8.png)
+
 - Log in with your existing account.  
+
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.7.png)
 
 **2.** Select **Create** → **SQL worksheets**  
 
@@ -50,7 +54,7 @@ For this step, go back to AWS with an admin account and retrieve the `AWS_KEY_ID
 
 To obtain these credentials, navigate to IAM: Select **Users** → Go to **Security credentials** → Under **Access keys**, you will find your **AWS_KEY_ID** and **AWS_SECRET_KEY**. (Alternatively, you can create a new access key and use the newly generated credentials for the above command.)  
 
-**4.** Create the `stock_prices` table in Snowflake  
+**4.** Create the ```stock_prices``` table in **Snowflake**
 
 - Run the following SQL command:  
 
@@ -86,7 +90,7 @@ ON_ERROR = 'SKIP_FILE';
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.4.png)  
 
-- Use the command `SELECT * FROM stock_prices;` to verify the data.  
+- Use the command ```SELECT * FROM stock_prices;``` to verify the data.  
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.5.png)  
 
@@ -105,10 +109,10 @@ Next, we will configure **EventBridge** to continuously update data in **S3 Buck
 
 - Go to **Configuration** → **Trigger**  
 - Click **Add trigger**  
-- **Select a source**: `EventBridge CloudWatch Events`  
+- **Select a source**: ```EventBridge CloudWatch Events```
 - **Rule**: Create a new rule  
-- **Rule name**: `every_days`  
-- **Schedule expression**: `rate(1 day)`  
+- **Rule name**: ```every_days``` 
+- **Schedule expression**: ```rate(1 day)```  
 - Click **Add**  
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png)  

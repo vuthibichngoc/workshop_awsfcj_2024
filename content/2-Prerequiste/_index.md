@@ -19,5 +19,3 @@ The stock data is fetched directly from the website [Alphavantage](https://www.a
 ### Content
   - [Create IAM User](2.1-createec2/)
   - [Create Snowflake Account](2.2-createiamrole/)
-
-![test](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/arc-01.png)

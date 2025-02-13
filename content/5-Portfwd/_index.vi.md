@@ -16,7 +16,11 @@ Phần này yêu cầu có tài khoản Snowflake, hãy chắc chắn rằng b�
 
 **1.** Truy cập vào trang [Snowflake](https://app.snowflake.com/) 
 
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.8.png)
+
 - Đăng nhập bằng tài khoản đã tạo.
+
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.7.png)
 
 **2.** Chọn **Create** - **SQL worksheets**
 
@@ -48,7 +52,7 @@ Phần này bạn hãy quay lại AWS với tài khoản có quyền quản tr�
 
 Hãy thử truy cập vào IAM: Chọn thanh **Users** - Di chuyển đến **Security credentials** - Tại **Access keys** sẽ có **AWS_KEY_ID** cùng với **AWS_SECRET_KEY** (Hoặc bạn có thể tạo thêm Access keys và lấy AWS_KEY_ID cùng với AWS_SECRET_KEY từ Access keys vừa tạo để sử dụng cho đoạn lệnh trên.)
 
-**4.** Tạo bảng stock_prices trên Snowflake
+**4.** Tạo bảng **stock_prices** trên **Snowflake**
 
 - Hãy chạy đoạn lệnh dưới đây.
 
@@ -102,7 +106,7 @@ Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ �
 
 - Tới **Configuration** - chọn **Trigger**
 - Chọn **Add trigger**
-- **Select a source**: ``` EventBridge CloudWatch Events ``
+- **Select a source**: ``` EventBridge CloudWatch Events ```
 - **Rule**: Create a new rule.
 - **Rulename**: ``` every_days ```
 - **Schedule expression**: ``` rate(1 day) ```
@@ -113,5 +117,5 @@ Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ �
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)
 
 {{% notice tip %}}
-Như vậy, dữ liệu sẽ được cập nhật và đưa vào DynamoDB cùng S3 một cách liên tục theo từng ngày.
+Như vậy, dữ liệu sẽ được cập nhật và đưa vào **DynamoDB** cùng **S3** một cách liên tục theo từng ngày.
 {{% /notice %}}

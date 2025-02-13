@@ -12,21 +12,21 @@
     <title>Loading Data from S3 to Snowflake :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739437646" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739437646" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739437646"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -625,9 +625,11 @@
 <p>In the previous section, we stored stock data as <code>.csv</code> files by date in an <strong>S3 Bucket</strong>. Now, we will load it into <strong>Snowflake</strong> for easier visualization, usage, and management.</p>
 <h3 id="create-a-database-in-snowflake">Create a Database in Snowflake</h3>
 <p><strong>1.</strong> Go to <a href="https://app.snowflake.com/">Snowflake</a></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.8.png" alt="4"></p>
 <ul>
 <li>Log in with your existing account.</li>
 </ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.7.png" alt="4"></p>
 <p><strong>2.</strong> Select <strong>Create</strong> → <strong>SQL worksheets</strong></p>
 <ul>
 <li>Run the following commands:</li>
@@ -648,7 +650,7 @@
 </div>
 
 <p>To obtain these credentials, navigate to IAM: Select <strong>Users</strong> → Go to <strong>Security credentials</strong> → Under <strong>Access keys</strong>, you will find your <strong>AWS_KEY_ID</strong> and <strong>AWS_SECRET_KEY</strong>. (Alternatively, you can create a new access key and use the newly generated credentials for the above command.)</p>
-<p><strong>4.</strong> Create the <code>stock_prices</code> table in Snowflake</p>
+<p><strong>4.</strong> Create the <code>stock_prices</code> table in <strong>Snowflake</strong></p>
 <ul>
 <li>Run the following SQL command:</li>
 </ul>
@@ -970,19 +972,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739437646"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739437646"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739434137" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739434137"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739437646" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739437646"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

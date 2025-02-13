@@ -14,6 +14,8 @@ pre : " <b> 3.1. </b> "
 
 - Click **Create table**.
 
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.4.png)
+
 **2.** Information
 
 - **Table name**: Enter `stock-prices`

@@ -10,7 +10,7 @@ pre : " <b> 2.2 </b> "
 
 In this section, we will create a Snowflake account using the free trial for the first 30 days to serve the purpose of this lab exercise.
 
-**1.** Access the Snowflake website
+**1.** Access the **Snowflake** website
 
 - Visit the link: [Snowflake](https://www.snowflake.com/en/)
 - Select: **Start for free**
@@ -20,9 +20,9 @@ In this section, we will create a Snowflake account using the free trial for the
 
 - You can skip the remaining steps.
 
-**2.** Check the information sent to your Gmail.
+**2.** Check the information sent to your **Gmail**.
 
-After successfully creating the account, you will receive an email from Snowflake to the email you registered with.
+After successfully creating the account, you will receive an email from **Snowflake** to the email you registered with.
 
 - Select **Click to activate**
 ![sf](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.2.png)

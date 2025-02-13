@@ -13,6 +13,8 @@ pre : " <b> 3.1. </b> "
 
 - Chọn **Create table**.
 
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.4.png)
+
 **2.** Thông tin
 
 - **Table name**: điền ```stock-prices``` 

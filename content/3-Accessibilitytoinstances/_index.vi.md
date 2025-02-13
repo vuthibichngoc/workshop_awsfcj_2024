@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 3. </b> "
 ---
 
-Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.
+Trong bước này ta sẽ thực hiện việc đưa dữ liệu chứng khoán từ API xuống và lưu trữ chúng vào bảng sẽ được tạo ở bước này trong **DynamoDB**.
 
 ### Nội dung
 3.1. [Tạo bảng trong DynamoDB](3.1-public-instance/) \

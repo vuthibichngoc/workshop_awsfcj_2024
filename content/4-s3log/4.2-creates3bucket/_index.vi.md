@@ -26,7 +26,7 @@ DTToSnowflake ```
 
 ### Thiết lập Lamdba function
 
-**1.** Thêm layer.
+**1.** Thêm **Layer**.
 
 - Di chuyển tới phần **Layers** sau đó click chọn **Add a layer**
 - **Layer source**: AWS layers
@@ -36,7 +36,7 @@ DTToSnowflake ```
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.3.png)
 
 {{%notice tip%}}
-Phần version hãy chọn version mới nhất.
+Phần **Version** hãy chọn version mới nhất.
 {{%/notice%}}
 
 
@@ -54,7 +54,7 @@ Phần version hãy chọn version mới nhất.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.2.3.png)
 
-**4.** Thêm Trigger.
+**4.** Thêm **Trigger**.
 
 - Tại **Configuration** chọn **Trigger** ở bên trái.
 - Chọn **Add trigger**

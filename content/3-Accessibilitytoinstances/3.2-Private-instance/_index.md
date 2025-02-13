@@ -25,7 +25,7 @@ pre : " <b> 3.2. </b> "
 
 ### Set Up Lambda Function
 
-**1.** Add a layer.
+**1.** Add a **Layer**.
 
 - Navigate to the **Layers** section and click **Add a layer**
 - **Layer source**: AWS layers
@@ -44,6 +44,8 @@ Select the latest version in the version section.
 - Under **General configuration**, click **Edit**.
 - Set the **Timeout** to 15 seconds.
 
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.5.png)
+
 **3.** Add permissions for the function.
 
 - In the **Configuration** section, select **Permissions** on the left.
@@ -58,7 +60,7 @@ Select the latest version in the version section.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png)
 
-**4.** Insert data from [Alphavantage](https://www.alphavantage.co/) into the table created in DynamoDB.
+**4.** Insert data from [Alphavantage](https://www.alphavantage.co/) into the table created in **DynamoDB**.
 
 - Go to the **Code** section in the options bar.
 - Add the [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) in the **Code source** area.

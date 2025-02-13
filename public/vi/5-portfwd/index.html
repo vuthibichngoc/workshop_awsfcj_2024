@@ -12,21 +12,21 @@
     <title>Tải dữ liệu từ S3 lên Snowflake :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739434137" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739437646" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739437646" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739434137" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739437646" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739437646"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -625,9 +625,11 @@
 <p>Ở phần trước, ta đã có dữ liệu chứng khoán được lưu thành các tệp .csv theo ngày và được lưu trữ trong <strong>S3 Bucket</strong>, bây giờ ta sẽ đưa nó lên <strong>Snowflake</strong> để có thể dễ quan sát, sử dụng và quản lý.</p>
 <h3 id="tạo-cơ-sở-dữ-liệu-trên-snowflake">Tạo cơ sở dữ liệu trên Snowflake</h3>
 <p><strong>1.</strong> Truy cập vào trang <a href="https://app.snowflake.com/">Snowflake</a></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.8.png" alt="4"></p>
 <ul>
 <li>Đăng nhập bằng tài khoản đã tạo.</li>
 </ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.7.png" alt="4"></p>
 <p><strong>2.</strong> Chọn <strong>Create</strong> - <strong>SQL worksheets</strong></p>
 <ul>
 <li>Chạy các câu lệnh:</li>
@@ -647,7 +649,7 @@
 </div>
 
 <p>Hãy thử truy cập vào IAM: Chọn thanh <strong>Users</strong> - Di chuyển đến <strong>Security credentials</strong> - Tại <strong>Access keys</strong> sẽ có <strong>AWS_KEY_ID</strong> cùng với <strong>AWS_SECRET_KEY</strong> (Hoặc bạn có thể tạo thêm Access keys và lấy AWS_KEY_ID cùng với AWS_SECRET_KEY từ Access keys vừa tạo để sử dụng cho đoạn lệnh trên.)</p>
-<p><strong>4.</strong> Tạo bảng stock_prices trên Snowflake</p>
+<p><strong>4.</strong> Tạo bảng <strong>stock_prices</strong> trên <strong>Snowflake</strong></p>
 <ul>
 <li>Hãy chạy đoạn lệnh dưới đây.</li>
 </ul>
@@ -695,7 +697,7 @@ ON_ERROR = &#39;SKIP_FILE&#39;;
 <ul>
 <li>Tới <strong>Configuration</strong> - chọn <strong>Trigger</strong></li>
 <li>Chọn <strong>Add trigger</strong></li>
-<li><strong>Select a source</strong>: ``` EventBridge CloudWatch Events ``</li>
+<li><strong>Select a source</strong>: <code>EventBridge CloudWatch Events</code></li>
 <li><strong>Rule</strong>: Create a new rule.</li>
 <li><strong>Rulename</strong>: <code>every_days</code></li>
 <li><strong>Schedule expression</strong>: <code>rate(1 day)</code></li>
@@ -704,7 +706,7 @@ ON_ERROR = &#39;SKIP_FILE&#39;;
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png" alt="4"></p>
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png" alt="4"></p>
 
-<div class="notices tip" ><p>Như vậy, dữ liệu sẽ được cập nhật và đưa vào DynamoDB cùng S3 một cách liên tục theo từng ngày.</p>
+<div class="notices tip" ><p>Như vậy, dữ liệu sẽ được cập nhật và đưa vào <strong>DynamoDB</strong> cùng <strong>S3</strong> một cách liên tục theo từng ngày.</p>
 </div>
 
 
@@ -969,19 +971,19 @@ ON_ERROR = &#39;SKIP_FILE&#39;;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739437646"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739434137"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739434137"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739437646"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739437646"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739434137" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739434137"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739437646" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739437646"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

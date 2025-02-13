@@ -26,7 +26,7 @@ pre : " <b> 4.2 </b> "
 
 ### Set Up Lambda Function
 
-**1.** Add a layer.
+**1.** Add a **Layer**.
 
 - Navigate to the **Layers** section and click **Add a layer**
 - **Layer source**: AWS layers
@@ -53,7 +53,7 @@ Make sure to choose the latest version.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.2.3.png)
 
-**4.** Add Trigger.
+**4.** Add **Trigger**.
 
 - In the **Configuration** section, select **Trigger** on the left.
 - Click **Add trigger**

@@ -25,7 +25,7 @@ pre : " <b> 3.2. </b> "
 
 ### Thiết lập Lamdba function
 
-**1.** Thêm layer.
+**1.** Thêm **Layer**.
 
 - Di chuyển tới phần **Layers** sau đó click chọn **Add a layer**
 - **Layer source**: AWS layers
@@ -38,11 +38,13 @@ pre : " <b> 3.2. </b> "
 Phần version hãy chọn version mới nhất.
 {{%/notice%}}
 
-**2.** Chỉnh sửa timeout
+**2.** Chỉnh sửa **timeout**.
 
 - Đến phần **Configuration**
 - Tại **General configuration** chọn **Edit**
 - Tại **Timeout** hãy chỉnh cho nó lên đến 15s
+
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.1.5.png)
 
 **3.** Thêm quyền cho function.
 
@@ -58,7 +60,7 @@ Phần version hãy chọn version mới nhất.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png)
 
-**4.** Thực hiện đưa dữ liệu từ [Alphavantage](https://www.alphavantage.co/) vào bảng đã tạo trong DynamoDB
+**4.** Thực hiện đưa dữ liệu từ [Alphavantage](https://www.alphavantage.co/) vào bảng đã tạo trong **DynamoDB**
 
 - Đến phần **Code** ở thanh tùy chọn.
 - Thêm đoạn [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) vào phần **Code source** 
