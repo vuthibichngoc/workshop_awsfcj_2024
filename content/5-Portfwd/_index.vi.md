@@ -89,7 +89,7 @@ ON_ERROR = 'SKIP_FILE';
 
 - Sử dụng câu lệnh ``` SELECT * FROM stock_prices; ``` để xem dữ liệu đã nạp vào.
 
-![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.5.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.9.png)
 
 - Dữ liệu đã được thêm vào bảng thành công.
 

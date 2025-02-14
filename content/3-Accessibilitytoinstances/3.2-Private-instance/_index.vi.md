@@ -49,6 +49,9 @@ Phần version hãy chọn version mới nhất.
 **3.** Thêm quyền cho function.
 
 - Tại **Configuration** chọn **Permisstions** ở bên trái
+
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.png)
+
 - Chọn phần **role name**.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.4.png)

@@ -49,6 +49,9 @@ Select the latest version in the version section.
 **3.** Add permissions for the function.
 
 - In the **Configuration** section, select **Permissions** on the left.
+
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.png)
+
 - Click on the **role name**.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.4.png)

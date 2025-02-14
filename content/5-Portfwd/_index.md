@@ -92,7 +92,7 @@ ON_ERROR = 'SKIP_FILE';
 
 - Use the command ```SELECT * FROM stock_prices;``` to verify the data.  
 
-![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.5.png)  
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.9.png)
 
 - The data has been successfully loaded into the table.  
 
