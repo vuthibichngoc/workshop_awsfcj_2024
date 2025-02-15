@@ -16,7 +16,7 @@ Phần này yêu cầu có tài khoản Snowflake, hãy chắc chắn rằng b�
 
 **1.** Trong **AWS Management Console**, thực hiện tìm kiếm dịch vụ [**IAM**](https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/home) và chọn.
 
-![IAM1](/images/2.prerequisite/2.1.1.png)
+![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.1.png)
 
 **2.** Tại **Step 01** 
 
@@ -24,7 +24,7 @@ Phần này yêu cầu có tài khoản Snowflake, hãy chắc chắn rằng b�
 - **An AWS account**: **This account**
 - **Next**
 
-![4](/images/5.fwd/1.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/1.png)
 
 **3.** Tại **Step 02**
 
@@ -37,13 +37,13 @@ Phần này yêu cầu có tài khoản Snowflake, hãy chắc chắn rằng b�
 - Kiểm tra lại các thông tin
 - **Create role**
 
-![4](/images/5.fwd/2.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/2.png)
 
 {{% notice tip %}}
 Hãy nhớ lưu lại ARN của role này để tiếp tục bước sau.
 {{% /notice %}}
 
-![4](/images/5.fwd/23.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/23.png)
 
 ### Tạo cơ sở dữ liệu trên Snowflake
 
@@ -59,7 +59,7 @@ Hãy nhớ lưu lại ARN của role này để tiếp tục bước sau.
 
 ``` USE DATABASE STOCK_PRICES; ```
 
-![4](/images/5.fwd/3.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/3.png)
 
 - Tạo thành công **Database**.
 
@@ -81,7 +81,7 @@ CREATE OR REPLACE TABLE stock_prices_data(
 
 ```
 
-![4](/images/5.fwd/4.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/4.png)
 
 - Tạo thành công bảng trên **Snowflake**
 
@@ -110,7 +110,7 @@ create or replace storage integration s3_int
 Điền ARN của IAM Role vừa tạo đã được lưu từ bước trước để cho phép Snowflake truy cập vào S3, sửa lại đường dẫn S3 cho phù hợp với tên bucket của bạn.
 {{% /notice %}}
 
-![4](/images/5.fwd/5.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.png)
 
 **c.** Kiểm tra thông tin chi tiết về **Storage Integration**.
 
@@ -123,7 +123,7 @@ create or replace storage integration s3_int
 Hãy thực hiện câu lệnh 
 ``` DESC INTEGRATION s3_int; ``` để kiểm tra thông tin chi tiết về **Storage Integration**.
 
-![4](/images/5.fwd/6.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/6.png)
 
 {{% notice note %}}
 
@@ -135,7 +135,7 @@ Hãy lưu lại **property_value** của các **property**: **STORAGE_AWS_IAM_US
 - Chọn **Trust relationship** - **Edit trust policy**
 - Điền **property_value** của **STORAGE_AWS_ROLE_ARN** đã lưu lại từ trước vào sau **"AWS"**
 
-![4](/images/5.fwd/7.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/7.png)
 
 
 Sau đó, tiếp tục chọn **Add condition**
@@ -149,11 +149,11 @@ Sau đó, tiếp tục chọn **Add condition**
 
 -- **Value**: hãy điền **property_value** của **STORAGE_AWS_EXTERNAL_ID** đã lưu từ trước.
 
-![4](/images/5.fwd/8.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/8.png)
 
 - **Add condition**
 
-![4](/images/5.fwd/9.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/9.png)
 
 
 **d.** Tạo **File Format** để đọc csv 
@@ -169,7 +169,7 @@ create or replace file format csv_format
                     empty_field_as_null = true;
 
 ```
-![4](/images/5.fwd/10.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/10.png)
 
 **e.** Tạo **External Stage** để kết nối với **S3**
 
@@ -188,7 +188,7 @@ create or replace stage ext_csv_stage
   file_format = csv_format;
 
 ```
-![4](/images/5.fwd/11.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/11.png)
 
 **f.** Tạo **Pipe** để tự động load dữ liệu 
 
@@ -203,7 +203,7 @@ create or replace stage ext_csv_stage
 - Chọn **Trust relationship** - **Edit trust policy**
 - Sửa lại nội dung, điền **property_value** của **STORAGE_AWS_IAM_USER_ARN** đã lưu lại từ trước vào sau **"AWS"**
 
-![4](/images/5.fwd/13.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/13.png)
 
 Tiếp tục thực hiện câu lệnh.
 
@@ -215,11 +215,11 @@ on_error = CONTINUE;
 
 ```
 
-![4](/images/5.fwd/14.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/14.png)
 
 **g.** Thực hiện câu lệnh ``` show pipes ``` để kiểm tra **pipe**
 
-![4](/images/5.fwd/15.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/15.png)
 
 {{% notice note %}}
 
@@ -231,7 +231,7 @@ Hãy lưu thông tin hiển thị trong cột **notification_chanel**.
 - Chọn **bucket** được sử dụng để lưu thông tin được dùng để đưa lên **Snowflake**
 - Đến phần **Event notifications**
 
-![4](/images/5.fwd/16.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/16.png)
 
 - Chọn **Create event notification**
 - Tại phần **General configuration**
@@ -242,7 +242,7 @@ Hãy lưu thông tin hiển thị trong cột **notification_chanel**.
 
 -- Click chọn **All object create events**
 
-![4](/images/5.fwd/17.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/17.png)
 
 - Tại phần **Destination**
 
@@ -250,11 +250,11 @@ Hãy lưu thông tin hiển thị trong cột **notification_chanel**.
 
 -- **SQS queue**: hãy điền thông tin của cột **notification_chanel** vừa lưu vào.
 
-![4](/images/5.fwd/18.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/18.png)
 
 - **Save changes**
 
-![4](/images/5.fwd/19.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/19.png)
 
 **Event notification** đã được tạo thành công.
 
@@ -264,14 +264,14 @@ Hãy lưu thông tin hiển thị trong cột **notification_chanel**.
 - Đến phần **Code**.
 - Chọn **Test event** đã sử dụng từ trước - chọn **Edit test event** - chọn **Invoke**.
 
-![4](/images/5.fwd/20.png)
-![4](/images/5.fwd/21.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/20.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/21.png)
 
 **4.** **Kết quả**.
 
 - Thực hiện câu lệnh ``` select * from stock_price_data; ``` để xem kết quả đã được đưa từ **S3** lên **Snowflake**
 
-![4](/images/5.fwd/22.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/22.png)
 
 **Dữ liệu từ S3 đã được thêm vào Snowflake thành công.**
 
@@ -298,9 +298,9 @@ Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ �
 - **Schedule expression**: ``` rate(1 day) ```
 - **Add**
 
-![4](/images/5.fwd/5.1.6.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png)
 
-![4](/images/5.fwd/5.1.7.png)
+![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)
 
 {{% notice info %}}
 Hoàn thành xong, dữ liệu sẽ được cập nhật và đưa vào DynamoDB, S3 và Snowflake một cách liên tục theo từng ngày. Mỗi ngày, có thể kiểm tra các thông tin chứng khoán đã được cập nhật thêm theo ngày.
