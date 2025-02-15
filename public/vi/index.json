@@ -1,0 +1,106 @@
+[
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "DynamoDB Amazon DynamoDB là một cơ sở dữ liệu NoSQL khóa-giá trị được quản lý hoàn toàn, phi máy chủ và được thiết kế để chạy các ứng dụng hiệu suất cao trên mọi quy mô. DynamoDB cung cấp tính năng bảo mật tích hợp, sao lưu liên tục, sao chép đa Khu vực tự động, lưu đệm trong bộ nhớ và các công cụ tải và xuất dữ liệu.\nTính khả dụng, độ bền và khả năng chịu lỗi được tích hợp sẵn và không thể tắt được, vậy nên bạn không cần phải thiết kế các chức năng này cho ứng dụng của mình.\nDynamoDB được thiết kế để chạy các ứng dụng hiệu năng cao trên quy mô internet. Đó là các ứng dụng sẽ khiến cơ sở dữ liệu quan hệ truyền thống phải hoạt động quá mức. Với hơn mười năm đầu tư đổi mới tiên phong, DynamoDB cung cấp khả năng điều chỉnh quy mô vô hạn với hiệu suất mili giây một chữ số nhất quán và tính khả dụng lên đến 99,999%.\nAmazon Simple Storage Service (Amazon S3) Amazon Simple Storage Service (Amazon S3) Amazon Simple Storage Service (Amazon S3) là một dịch vụ lưu trữ đối tượng cung cấp khả năng thay đổi quy mô, mức độ sẵn sàng của dữ liệu, độ bảo mật và hiệu suất hàng đầu trong ngành.\nKhách hàng thuộc mọi quy mô và ngành nghề có thể lưu trữ và bảo vệ dữ liệu thuộc mọi kích thước cho hầu hết tất cả các trường hợp sử dụng, chẳng hạn như hồ dữ liệu, ứng dụng hoạt động trên đám mây và ứng dụng di động.\nVới các lớp lưu trữ tiết kiệm chi phí và tính năng quản lý dễ sử dụng, bạn có thể tối ưu hóa chi phí, tổ chức dữ liệu và cấu hình các biện pháp kiểm soát quyền truy cập được tinh chỉnh để đáp ứng yêu cầu cụ thể về kinh doanh, tổ chức và tuân thủ.\nAWS Lambda AWS Lamdba là một dịch vụ điện toán sẽ chạy mã của bạn để phản hồi các sự kiện và tự động quản lý tài nguyên điện toán, giúp dịch vụ này trở thành cách nhanh nhất để biến một ý tưởng thành một ứng dụng sản xuất phi máy chủ hiện đại.\nSnowflake Snowflake cung cấp Đám mây dữ liệu – một mạng lưới toàn cầu nơi hàng nghìn tổ chức huy động dữ liệu với quy mô, tính đồng thời và hiệu năng gần như không giới hạn. Bên trong Đám mây dữ liệu, các tổ chức hợp nhất dữ liệu cô lập của họ, dễ dàng khám phá và chia sẻ dữ liệu được quản lý một cách bảo mật, đồng thời thực thi khối lượng công việc phân tích đa dạng. Tham gia Đám mây dữ liệu.\nSnowflake là một Đối tác AWS cung cấp các giải pháp phần mềm và đã đạt được năng lực trong Phân tích dữ liệu, Máy học và Bán lẻ.\nƯu điểm\nKhả năng mở rộng vô hạn: Snowflake có khả năng mở rộng linh hoạt, cho phép người dùng tăng hoặc giảm tài nguyên dựa trên nhu cầu thực tế mà không gây gián đoạn dịch vụ.\nHiệu suất cao: Snowflake tối ưu hóa việc xử lý truy vấn thông qua kiến trúc đa cụm, giúp cải thiện tốc độ và hiệu suất phân tích dữ liệu.\nBảo mật và tuân thủ: Snowflake tích hợp các cơ chế bảo mật tiên tiến như mã hóa dữ liệu, kiểm soát truy cập và tuân thủ các quy định bảo mật quốc tế.\nDễ dàng sử dụng: Giao diện thân thiện và trực quan của Snowflake giúp người dùng dễ dàng thao tác và quản lý dữ liệu mà không cần nhiều kiến thức chuyên sâu về kỹ thuật.\n"
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/3-accessibilitytoinstances/3.1-public-instance/",
+	"title": "Tạo bảng trong DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": "Tạo bảng trong DynamoDB 1. Trong AWS Management Console, thực hiện tìm kiếm dịch vụ DynamoDB và chọn.\nChọn Create table. 2. Thông tin\nTable name: điền stock-prices\nPartition key: symbol\nSort key: timestamp\nChọn Create table\nBảng được tạo thành công Tên của bảng yêu cầu không được trùng.\n"
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/2-prerequiste/2.1-createec2/",
+	"title": "Tạo IAM User",
+	"tags": [],
+	"description": "",
+	"content": "Tạo IAM User Trong bước này, chúng ta sẽ cần tạo một tài khoản IAM User để sử dụng cho việc thực hiện bài thực hành này.\n1. Trong AWS Management Console, thực hiện tìm kiếm dịch vụ IAM và chọn.\n2. Trong IAM Dashboard, chọn Users từ menu bên trái và sau đó chọn Create user.\n3. Thực hiện điền các thông tin.\nUsername: user_fcj_2024 Click chọn Provide user access to the AWS Management Console Chọn custom password và nhập password cho tại khoản. Tùy chọn có thể yêu cầu người dùng phải tạo mật khẩu mới khi đăng nhập hoặc không. Ở đây người dùng có thể đăng nhập vào luôn và không cần phải tạo lại mật khẩu. Chọn Next. 4. Gán thêm các quyền cần thiết cho User.\nChọn Attach policies directly. Chọn các quyền: AmazonDynamoDBFullAccess, AmazonS3FullAccess, AWSLambda_FullAccess, AmazonEventBridgeFullAccess, IAMFullAccess. Chọn Next. 5. Xem lại các thông tin đã thêm vào.\nChọn Create user.\nNgười dùng đã được tạo thành công, có thể tải file cvs thông tin người dùng.\nCó thể sử dụng đường link URL để đăng nhập và sử dụng tài khoản đã tạo. "
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/4-s3log/4.1-updateiamrole/",
+	"title": "Tạo S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "Tạo S3 Bucket 1. Trong AWS Management Console, thực hiện tìm kiếm dịch vụ S3 và chọn.\n2. Tạo S3 Bucket\nChọn Create bucket Tại Bucket name điền data-stock-prices-01 Phần còn lại để mặc định. Chọn Create bucket Tạo thành công. 3. Thêm folder lưu trữ dữ liệu.\nTại Objects - chọn Create folder Folder name: snowflake Chọn Create folder Tạo folder thành công. Tên của S3 Bucket phải là duy nhất, nếu tên đã trùng hãy thử thêm chữ hoặc số ở phía sau.\n"
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/",
+	"title": "Xây dựng hệ thống xử lý và lưu trữ dữ liệu chứng khoán bằng AWS Lambda, DynamoDB, S3 và Snowflake",
+	"tags": [],
+	"description": "",
+	"content": "Xây dựng hệ thống xử lý và lưu trữ dữ liệu chứng khoán bằng AWS Lambda, DynamoDB, S3 và Snowflake Tổng quan Dự án này xây dựng một hệ thống xử lý và lưu trữ dữ liệu chứng khoán tự động bằng cách sử dụng các dịch vụ AWS và Snowflake. Hệ thống thu thập giá cổ phiếu Microsoft từ API thông qua AWS Lambda và lưu trữ vào Amazon DynamoDB. Sau đó, một Lambda function khác xử lý và chuyển đổi dữ liệu thành các file CSV, lưu vào Amazon S3. Cuối cùng, dữ liệu được đưa vào Snowflake để phục vụ phân tích và báo cáo. Hệ thống tận dụng AWS Lambda, DynamoDB, S3 và CloudWatch Events để đảm bảo thu thập, xử lý và lưu trữ dữ liệu hiệu quả.\nNội dung Giới thiệu Các bước chuẩn bị Thu thập và lưu trữ dữ liệu vào DynamoDB Chuyển đổi và lưu dữ liệu dưới dạng CSV vào S3 Tải dữ liệu từ S3 lên Snowflake Dọn dẹp tài nguyên "
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/2-prerequiste/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "\rBạn cần có tài khoản AWS và Snowflake để thực hiện bài thực hành này.\nĐể đưa dữ liệu từ S3 lên Snowflake, bạn có thể tạo tài khoản sử dụng miễn phí trong 30 ngày trên trang chủ của Snowflake.\nNguồn dữ liệu chứng khoán Được lấy xuống trực tiếp thông qua trang web Alphavantage và được cập nhật liên tục.\nNội dung Tạo tài khoản IAM User Tạo tài khoản Snowflake "
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/3-accessibilitytoinstances/3.2-private-instance/",
+	"title": "Lưu dữ liệu vào DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": "Lưu dữ liệu vào DynamoDB Tạo Lamdba function 1. Trong AWS Management Console, thực hiện tìm kiếm dịch vụ Lambda và chọn.\n2. Tạo function trong Lambda\nChọn Create function Function name: fetch_code Runtime: Python 3.10 Architecture: x86_64 Create function Thiết lập Lamdba function 1. Thêm Layer.\nDi chuyển tới phần Layers sau đó click chọn Add a layer Layer source: AWS layers AWS layers: AWSSDKPandas-Python310 Version: 23 Phần version hãy chọn version mới nhất.\n2. Chỉnh sửa timeout.\nĐến phần Configuration Tại General configuration chọn Edit Tại Timeout hãy chỉnh cho nó lên đến 15s 3. Thêm quyền cho function.\nTại Configuration chọn Permisstions ở bên trái Chọn phần role name. Tới phần Permissions có thể thấy Permissions policies Chọn Add permissions - Attach policies Thực hiện thêm quyền AmazonDynamoDBFullAccess Chọn Add permissions 4. Thực hiện đưa dữ liệu từ Alphavantage vào bảng đã tạo trong DynamoDB\nĐến phần Code ở thanh tùy chọn. Thêm đoạn SourceCode vào phần Code source Chọn Deploy Chọn Test - Create new test event - điền các thông tin và chọn Save Thực hiện chạy đoạn code. Kết quả sau khi chạy. Kết quả tại DynamoDB. Truy cập vào DynamoDB Chọn Tables ở thanh tùy chọn bên trái - Click chọn Tables đã tạo từ trước. Tại bảng đã tạo từ trước, chọn Explore table items - Chọn nút Run Kết quả đã được đưa xuống từ trang web Alphavantage và lưu vào bảng stock_prices đã tạo từ trước ở DynamoDB "
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/4-s3log/4.2-creates3bucket/",
+	"title": "Lưu dữ liệu vào S3 Bucket",
+	"tags": [],
+	"description": "",
+	"content": "Lưu dữ liệu vào S3 Bucket Tạo Lamdba function 1. Trong AWS Management Console, thực hiện tìm kiếm dịch vụ Lambda và chọn.\n2. Tạo function trong Lambda\nChọn Create function Function name: DTToSnowflake Runtime: Python 3.10 Architecture: x86_64 Create function Thiết lập Lamdba function 1. Thêm Layer.\nDi chuyển tới phần Layers sau đó click chọn Add a layer Layer source: AWS layers AWS layers: AWSSDKPandas-Python310 Version: 23 Phần Version hãy chọn version mới nhất.\n2. Thêm quyền cho function.\nTại Configuration chọn Permisstions ở bên trái Chọn phần role name. Tới phần Permissions có thể thấy Permissions policies Chọn Add permissions - Attach policies Thực hiện thêm quyền AmazonDynamoDBFullAccess, AmazonS3FullAccess Chọn Add permissions 4. Thêm Trigger.\nTại Configuration chọn Trigger ở bên trái. Chọn Add trigger Tìm tiếm DynamoDB và chọn. DynamoDB table: hãy chọn tên bảng đã tạo ở DynamoDB từ bước thứ 3 Chọn Add 5. Thực hiện đưa dữ liệu từ bảng stock_prices trong DynamoDB vào S3 Bucket đã tạo.\nĐến phần Code ở thanh tùy chọn. Thêm đoạn SourceCode vào phần Code source Chọn Deploy Chọn Test - Create new test event - điền các thông tin và chọn Save Thực hiện chạy đoạn code. Kết quả sau khi chạy. Kết quả tại S3 Bucket. Truy cập vào S3 Bucket Chọn General purpose buckets ở thanh tùy chọn bên trái - Click chọn Tables đã tạo từ trước - chọn vào folder đã tạo. Dữ liệu về chứng khoán đã được xử lý thành các file .csv theo ngày tháng tương ứng và lưu vào S3 Bucket đã tạo. "
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/2-prerequiste/2.2-createiamrole/",
+	"title": "Tạo tài khoản Snowflake",
+	"tags": [],
+	"description": "",
+	"content": "Tạo tài khoản Snowflake Ở phần này sẽ thực hiện việc tạo 1 tài khoản Snowflake sử dụng miễn phí trong 30 ngày đầu tiên để phục vụ cho mục đích thực hiện bài thực hành này.\n1. Truy cập vào trang web của Snowflake\nTruy cập theo đường link: Snowflake\nChọn: Start for free\nThực hiện điền các thông tin cần thiết.\nChọn Next. Các bước sau cùng có thể chọn Skip.\n2. Kiểm tra thông tin được gửi tới Gmail.\nSau khi tạo tài khoản thành công sẽ có gmail của Snowflake được gửi tới gmail đã dùng để đăng ký.\nChọn Click to active Điền các thông tin cần thiết. Đăng nhập thành công vào trang chủ của Snowflake "
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/3-accessibilitytoinstances/",
+	"title": "Thu thập và lưu trữ dữ liệu vào DynamoDB",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này ta sẽ thực hiện việc đưa dữ liệu chứng khoán từ API xuống và lưu trữ chúng vào bảng sẽ được tạo ở bước này trong DynamoDB.\nNội dung 3.1. Tạo bảng trong DynamoDB 3.2. Lưu trữ dữ liệu vào DynamoDB\n"
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/4-s3log/",
+	"title": "Chuyển đổi và lưu dữ liệu dưới dạng CSV vào S3",
+	"tags": [],
+	"description": "",
+	"content": "Ở phần này sẽ thực hiện sử dụng dữ liệu từ bảng stock_prices đã tạo trong DynamoDB từ bước 3, chuyển đổi chúng thành các file .cvs để lưu vào S3.\nNội dung: Tạo S3 Bucket Lưu dữ liệu vào S3 Bucket "
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/5-portfwd/",
+	"title": "Tải dữ liệu từ S3 lên Snowflake",
+	"tags": [],
+	"description": "",
+	"content": "\rPhần này yêu cầu có tài khoản Snowflake, hãy chắc chắn rằng bạn đã có.\nỞ phần trước, ta đã có dữ liệu chứng khoán được lưu thành các tệp .csv theo ngày và được lưu trữ trong S3 Bucket, bây giờ ta sẽ đưa nó lên Snowflake để có thể dễ quan sát, sử dụng và quản lý.\nTạo IAM Role cho phép Snowflake truy cập vào S3 1. Trong AWS Management Console, thực hiện tìm kiếm dịch vụ IAM và chọn.\n2. Tại Step 01\nTrusted entity type: AWS account An AWS account: This account Next 3. Tại Step 02\nCấp cho role này quyền AmazonS3FullAccess Next 4. Tại Step 03\nRole name: snowflake-stock-prices Kiểm tra lại các thông tin Create role Hãy nhớ lưu lại ARN của role này để tiếp tục bước sau.\nTạo cơ sở dữ liệu trên Snowflake 1. Truy cập vào trang Snowflake\nĐăng nhập bằng tài khoản đã tạo. 2. Chọn Create - SQL worksheets\nChạy các câu lệnh: CREATE DATABASE STOCK_PRICES;\nUSE DATABASE STOCK_PRICES;\nTạo thành công Database. 3. Tạo bảng stock_prices_data trên Snowflake và đưa dữ liệu vào.\na. Tạo bảng dữ liệu chứng khoán.\nCREATE OR REPLACE TABLE stock_prices_data(\rlow VARCHAR(128), symbol VARCHAR(128),\rtimestamp VARCHAR(128),\ropen VARCHAR(128),\rvolume VARCHAR(128),\rhigh VARCHAR(128),\rclose VARCHAR(128),\rdate VARCHAR(128)\r); Tạo thành công bảng trên Snowflake b. Tạo Integration Object kết nối với S3.\nIntegration Object trong Snowflake là một đối tượng kết nối bên ngoài giúp Snowflake giao tiếp với các dịch vụ khác như S3\nHãy thực hiện câu lệnh dưới đây để tạo Integration Object kết nối với S3.\ncreate or replace storage integration s3_int\rtype = external_stage\rstorage_provider = s3\renabled = true\rstorage_aws_role_arn = \u0026#39;\u0026lt;\u0026lt;Your role ARN\u0026gt;\u0026gt;\u0026#39;\rstorage_allowed_locations = (\u0026#39;s3://data-stock-prices-01/snowflake/\u0026#39;); Điền ARN của IAM Role vừa tạo đã được lưu từ bước trước để cho phép Snowflake truy cập vào S3, sửa lại đường dẫn S3 cho phù hợp với tên bucket của bạn.\nc. Kiểm tra thông tin chi tiết về Storage Integration.\nStorage Integration là một đối tượng trong Snowflake dùng để kết nối với dịch vụ lưu trữ bên ngoài như AWS S3 một cách bảo mật và quản lý tự động. Thay vì phải cung cấp access key và secret key để truy cập S3, Snowflake cho phép sử dụng IAM Role của AWS để cấp quyền truy cập một cách an toàn.\nHãy thực hiện câu lệnh DESC INTEGRATION s3_int; để kiểm tra thông tin chi tiết về Storage Integration.\nHãy lưu lại property_value của các property: STORAGE_AWS_IAM_USER_ARN, STORAGE_AWS_ROLE_ARN, STORAGE_AWS_EXTERNAL_ID\nTrở lại IAM - chọn Roles - chọn role vừa tạo ở bước trước. Chọn Trust relationship - Edit trust policy Điền property_value của STORAGE_AWS_ROLE_ARN đã lưu lại từ trước vào sau \u0026ldquo;AWS\u0026rdquo; Sau đó, tiếp tục chọn Add condition\nĐiền các thông tin: \u0026ndash; Condition key: sts:ExternalId\n\u0026ndash; Qualifier: Default\n\u0026ndash; Operator: StringEquals\n\u0026ndash; Value: hãy điền property_value của STORAGE_AWS_EXTERNAL_ID đã lưu từ trước.\nAdd condition d. Tạo File Format để đọc csv\nTiếp tục chạy câu lệnh bên dưới\ncreate or replace file format csv_format\rtype = csv\rfield_delimiter = \u0026#39;,\u0026#39;\rskip_header = 1\rnull_if = (\u0026#39;NULL\u0026#39;, \u0026#39;null\u0026#39;)\rempty_field_as_null = true; e. Tạo External Stage để kết nối với S3\nExternal Stage là một kho lưu trữ bên ngoài được Snowflake sử dụng để truy xuất dữ liệu từ các dịch vụ lưu trữ đám mây như Amazon S3, Google Cloud Storage, hoặc Azure Blob Storage. Nó cho phép Snowflake đọc và ghi dữ liệu trực tiếp từ/đến kho lưu trữ bên ngoài mà không cần tải dữ liệu về Snowflake trước.\nThực hiện đoạn lệnh dưới đây để tạo External Stage để kết nối với S3 đã được tạo từ trước.\ncreate or replace stage ext_csv_stage\rURL = \u0026#39;s3://data-stock-prices-01/snowflake/\u0026#39;\rSTORAGE_INTEGRATION = s3_int\rfile_format = csv_format; f. Tạo Pipe để tự động load dữ liệu\nPipe trong Snowflake là một cơ chế tự động hóa quá trình nạp dữ liệu từ External Stage (S3) vào bảng trong Snowflake. Nó sử dụng Snowpipe, một dịch vụ của Snowflake giúp tự động phát hiện khi có tệp mới trong kho lưu trữ đám mây (ví dụ: S3) và nạp dữ liệu vào bảng ngay lập tức mà không cần chạy lệnh COPY INTO thủ công.\nHãy trở lại IAM - Roles - chọn role vừa tạo ở bước trước. Chọn Trust relationship - Edit trust policy Sửa lại nội dung, điền property_value của STORAGE_AWS_IAM_USER_ARN đã lưu lại từ trước vào sau \u0026ldquo;AWS\u0026rdquo; Tiếp tục thực hiện câu lệnh.\ncreate or replace pipe mypipe auto_ingest=true as\rcopy into stock_price_data\rfrom @ext_csv_stage\ron_error = CONTINUE; g. Thực hiện câu lệnh show pipes để kiểm tra pipe\nHãy lưu thông tin hiển thị trong cột notification_chanel.\nTrở lại với S3 Chọn bucket được sử dụng để lưu thông tin được dùng để đưa lên Snowflake Đến phần Event notifications Chọn Create event notification Tại phần General configuration \u0026ndash; Event name: stock-price-event\nTại Event types \u0026ndash; Click chọn All object create events\nTại phần Destination \u0026ndash; Destination: SQS queue\n\u0026ndash; SQS queue: hãy điền thông tin của cột notification_chanel vừa lưu vào.\nSave changes Event notification đã được tạo thành công.\nHãy trở lại với Lambda Chọn Function Chọn function đầu tiên được tạo để đưa dữ liệu vào DynamoDB (ở đây function của mình có tên là fetch_code) Đến phần Code. Chọn Test event đã sử dụng từ trước - chọn Edit test event - chọn Invoke. 4. Kết quả.\nThực hiện câu lệnh select * from stock_price_data; để xem kết quả đã được đưa từ S3 lên Snowflake Dữ liệu từ S3 đã được thêm vào Snowflake thành công.\nTiếp theo ta sẽ thực hiện thêm EventBridge để dữ liệu sẽ được cập nhật liên tục theo thời gian thực vào S3 Bucket và Snowflake.\nThêm EventBridge (CloudWatch Events) 1. Hãy trở lại AWS và chọn Lambda.\nChọn Function. Chọn function fetch_code 2. Thêm trigger EventBridge (CloudWatch Events)\nTới Configuration - chọn Trigger Chọn Add trigger Select a source: ``` EventBridge CloudWatch Events `` Rule: Create a new rule. Rulename: every_days Schedule expression: rate(1 day) Add Hoàn thành xong, dữ liệu sẽ được cập nhật và đưa vào DynamoDB, S3 và Snowflake một cách liên tục theo từng ngày. Mỗi ngày, có thể kiểm tra các thông tin chứng khoán đã được cập nhật thêm theo ngày.\n"
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/6-cleanup/",
+	"title": "Dọn dẹp tài nguyên  ",
+	"tags": [],
+	"description": "",
+	"content": "Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng ta đã tạo trong bài thực hành này.\nQuy trình Dọn dẹp: Xóa Tài nguyên AWS và Snowflake Để xóa hoàn toàn các tài nguyên đã tạo trong dự án này, hãy làm theo quy trình dọn dẹp có cấu trúc dưới đây.\n1. Xóa Cơ sở Dữ liệu trên Snowflake Đăng nhập vào tài khoản Snowflake. Điều hướng đến Data → Databases. Tìm và chọn cơ sở dữ liệu đã tạo trước đó. Chạy lệnh SQL sau trong SQL worksheet: DROP DATABASE FCJ_STOCK_PRICES; Xác nhận rằng cơ sở dữ liệu đã được xóa thành công. 2. Xóa IAM User Mở AWS Management Console và tìm kiếm IAM. Điều hướng đến Users. Xác định và chọn các IAM User đã tạo trong dự án này. Nhấp vào Delete và xác nhận để xóa User. 3. Xóa Hàm Lambda (Lambda Functions) Truy cập AWS Lambda trong AWS Management Console. Dưới mục Functions, tìm các hàm Lambda đã tạo. Chọn hàm cần xóa, nhấp vào Actions, sau đó chọn Delete. Xác nhận xóa khi được yêu cầu. 4. Xóa S3 Bucket Điều hướng đến Amazon S3 trong AWS Management Console. Tìm bucket đã tạo để lưu trữ dữ liệu chứng khoán. Chọn bucket, sau đó nhấp vào Empty. Nhập \u0026ldquo;permanently delete\u0026rdquo; để xác nhận và xóa toàn bộ dữ liệu trong bucket. Sau khi bucket trống, nhấp vào Delete và xác nhận xóa. 5. Xóa Bảng DynamoDB Mở AWS Management Console và tìm kiếm DynamoDB. Điều hướng đến Tables và tìm bảng đã tạo trong dự án này. Chọn bảng, sau đó nhấp vào Delete. Xác nhận việc xóa và chờ cho đến khi bảng bị xóa hoàn toàn. 6. Kiểm tra Lần Cuối Đảm bảo rằng tất cả các tài nguyên AWS (IAM roles, Lambda functions, S3 buckets và DynamoDB tables) đã bị xóa. Xác nhận rằng cơ sở dữ liệu Snowflake không còn tồn tại. Quy trình này giúp đảm bảo việc xóa sạch và có tổ chức tất cả các tài nguyên liên quan đến dự án.\n"
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
