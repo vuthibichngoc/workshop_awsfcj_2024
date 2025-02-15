@@ -30,7 +30,7 @@ pre : " <b> 4.1 </b> "
 
 ![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.3.png)
 
-- Tạo foler thành công.
+- Tạo folder thành công.
 
 ![IAM1](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/4.s3/4.1.4.png)
 

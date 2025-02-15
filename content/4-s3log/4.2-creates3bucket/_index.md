@@ -72,6 +72,7 @@ Make sure to choose the latest version.
 - Go to the **Code** section in the options bar.
 - Add the [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/DTToSnowflake.py) to the **Code source**
 - Click **Test** → **Create new test event** → fill in the required details and click **Save**
+- Click **Deploy**
 - Run the code.
 - **Result after running**:
 

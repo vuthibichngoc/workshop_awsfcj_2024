@@ -67,6 +67,7 @@ Phần version hãy chọn version mới nhất.
 
 - Đến phần **Code** ở thanh tùy chọn.
 - Thêm đoạn [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) vào phần **Code source** 
+- Chọn **Deploy**
 - Chọn **Test** - **Create new test event** - điền các thông tin và chọn **Save**
 - Thực hiện chạy đoạn code.
 - **Kết quả sau khi chạy**.

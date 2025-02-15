@@ -68,6 +68,7 @@ Select the latest version in the version section.
 - Go to the **Code** section in the options bar.
 - Add the [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) in the **Code source** area.
 - Click **Test** - **Create new test event**, enter the necessary information, and click **Save**.
+- Click **Deploy**
 - Execute the code.
 - **Result after execution**.
 
