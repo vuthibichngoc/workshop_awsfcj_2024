@@ -12,21 +12,21 @@
     <title>Tải dữ liệu từ S3 lên Snowflake :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739689574" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739700923" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739689574" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739700923" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739689574"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739700923"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -591,6 +591,7 @@
       <ul>
         <li><a href="#tạo-iam-role-cho-phép-snowflake-truy-cập-vào-s3">Tạo IAM Role cho phép Snowflake truy cập vào S3</a></li>
         <li><a href="#tạo-cơ-sở-dữ-liệu-trên-snowflake">Tạo cơ sở dữ liệu trên Snowflake</a></li>
+        <li><a href="#quan-sát-dữ-liệu-trong-snowflake">Quan sát dữ liệu trong Snowflake</a></li>
         <li><a href="#thêm-eventbridge-cloudwatch-events">Thêm EventBridge (CloudWatch Events)</a></li>
       </ul>
     </li>
@@ -816,6 +817,59 @@ on_error = CONTINUE;
 </ul>
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/22.png" alt="4"></p>
 <p><strong>Dữ liệu từ S3 đã được thêm vào Snowflake thành công.</strong></p>
+<hr>
+<h3 id="quan-sát-dữ-liệu-trong-snowflake">Quan sát dữ liệu trong Snowflake</h3>
+<p>Hãy chọn <strong>Chart</strong> trên thanh <strong>result</strong> của <strong>Snowflake</strong> sau khi chạy câu lệnh <code>select * from stock_price_data;</code></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/25.png" alt="4"></p>
+<ul>
+<li>Tại đây ta có thể thực hiện việc tạo các biểu đồ dựa trên dữ liệu được lưu trong table vừa tạo.</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/26.png" alt="4"></p>
+<p>Các mục bao gồm: <strong>Chart type</strong>, <strong>Data</strong>, <strong>Appearance</strong></p>
+<p><strong>1.</strong> <strong>Chart type</strong></p>
+
+<div class="notices info" ><p><strong>Chart type</strong> cho phép người dùng chọn lựa các biểu đồ để thể hiện dữ liệu.</p>
+</div>
+
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/27.png" alt="4"></p>
+<p>&ndash; <strong>Line Chart</strong> (Biểu đồ đường)</p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/28.png" alt="4">
+<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/29.png" alt="4"></p>
+<p>&ndash; <strong>Bar Chart</strong> (Biểu đồ cột)</p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/30.png" alt="4">
+<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/31.png" alt="4"></p>
+<p>&ndash; <strong>Scatter Plot</strong> (Biểu đồ phân tán)</p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/32.png" alt="4"></p>
+<p>&ndash; <strong>Heatgrid</strong> (Bản đồ nhiệt dạng lưới)</p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/33.png" alt="4"></p>
+<p>&ndash; <strong>Scorecard</strong> (Thẻ điểm)</p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/34.png" alt="4"></p>
+<p><strong>2.</strong> <strong>Data</strong></p>
+
+<div class="notices info" ><p><strong>Data</strong> ở đây là dữ liệu được lưu trong bảng (table) hoặc truy vấn từ bảng (query). Đây là nguồn cung cấp dữ liệu để vẽ biểu đồ.</p>
+</div>
+
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/35.png" alt="4"></p>
+<p>Cho phép chọn lựa các cột dữ liệu, có thể lấy giá trị tổng (sum), lớn nhất (max), bé nhất (min),&hellip;</p>
+<p>Có thể loại bỏ cột dữ liệu đó khỏi biểu đồ, cũng có thể thêm một cột dữ liệu mới vào.</p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/36.png" alt="4"></p>
+<p><strong>3.</strong> <strong>Appearance</strong></p>
+
+<div class="notices info" ><p><strong>Appearance</strong> (giao diện) của biểu đồ liên quan đến cách hiển thị trực quan dữ liệu. Nó không ảnh hưởng đến data nhưng giúp biểu đồ dễ hiểu hơn.</p>
+</div>
+
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/37.png" alt="4"></p>
+<p><strong>Ví dụ</strong>: Thực hiện thêm tên của các cột trong đồ thị và hiển thị chú thích.</p>
+<ul>
+<li>Trước khi thực hiện thêm.</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/39.png" alt="4"></p>
+<ul>
+<li>Sau khi thêm.</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/38.png" alt="4"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/40.png" alt="4"></p>
+<hr>
 
 <div class="notices info" ><p>Tiếp theo ta sẽ thực hiện thêm <strong>EventBridge</strong> để dữ liệu sẽ được cập nhật liên tục theo thời gian thực vào <strong>S3 Bucket</strong> và <strong>Snowflake</strong>.</p>
 </div>
@@ -1104,19 +1158,19 @@ on_error = CONTINUE;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739689574"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739700923"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739689574"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739700923"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739689574" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739689574"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739700923" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739700923"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

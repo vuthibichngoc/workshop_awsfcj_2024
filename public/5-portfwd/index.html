@@ -12,21 +12,21 @@
     <title>Loading Data from S3 to Snowflake :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739689574" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739689574" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739700923" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739689574" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739700923" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739689574"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739700923"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -591,6 +591,7 @@
       <ul>
         <li><a href="#create-an-iam-role-to-allow-snowflake-access-to-s3">Create an IAM Role to allow Snowflake access to S3</a></li>
         <li><a href="#create-a-database-in-snowflake">Create a Database in Snowflake</a></li>
+        <li><a href="#observing-data-in-snowflake">Observing Data in Snowflake</a></li>
         <li><a href="#adding-eventbridge-cloudwatch-events">Adding EventBridge (CloudWatch Events)</a></li>
       </ul>
     </li>
@@ -651,6 +652,7 @@
 </div>
 
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/23.png" alt="4"></p>
+<hr>
 <h3 id="create-a-database-in-snowflake">Create a Database in Snowflake</h3>
 <p><strong>1.</strong> Go to <a href="https://app.snowflake.com/">Snowflake</a></p>
 <ul>
@@ -816,11 +818,62 @@ on_error = CONTINUE;
 </ul>
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/22.png" alt="4"></p>
 <p><strong>The data from S3 has been successfully added to Snowflake.</strong></p>
+<h3 id="observing-data-in-snowflake">Observing Data in Snowflake</h3>
+<p>Select <strong>Chart</strong> on the <strong>result</strong> bar in <strong>Snowflake</strong> after running the query:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> stock_price_data;
+</span></span></code></pre></div><p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/25.png" alt="4"></p>
+<ul>
+<li>Here, you can create charts based on the data stored in the table.</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/26.png" alt="4"></p>
+<p>The sections include: <strong>Chart type</strong>, <strong>Data</strong>, and <strong>Appearance</strong></p>
+<h4 id="1-chart-type"><strong>1. Chart type</strong></h4>
+
+<div class="notices info" ><p><strong>Chart type</strong> allows users to select different types of charts to visualize data.</p>
+</div>
+
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/27.png" alt="4"></p>
+<p>&ndash; <strong>Line Chart</strong></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/28.png" alt="4"><br>
+<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/29.png" alt="4"></p>
+<p>&ndash; <strong>Bar Chart</strong></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/30.png" alt="4"><br>
+<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/31.png" alt="4"></p>
+<p>&ndash; <strong>Scatter Plot</strong></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/32.png" alt="4"></p>
+<p>&ndash; <strong>Heatgrid</strong></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/33.png" alt="4"></p>
+<p>&ndash; <strong>Scorecard</strong></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/34.png" alt="4"></p>
+<h4 id="2-data"><strong>2. Data</strong></h4>
+
+<div class="notices info" ><p><strong>Data</strong> refers to the information stored in a table or retrieved through a query. This serves as the source for chart visualization.</p>
+</div>
+
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/35.png" alt="4"></p>
+<p>It allows you to select specific columns, aggregate values (sum, max, min, etc.), remove columns from the chart, or add new ones.</p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/36.png" alt="4"></p>
+<h4 id="3-appearance"><strong>3. Appearance</strong></h4>
+
+<div class="notices info" ><p><strong>Appearance</strong> relates to the visual representation of the chart. It does not affect the data but enhances readability and interpretation.</p>
+</div>
+
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/37.png" alt="4"></p>
+<p><strong>Example</strong>: Adding column names and legend to the chart.</p>
+<ul>
+<li>Before adding:</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/39.png" alt="4"></p>
+<ul>
+<li>After adding:</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/38.png" alt="4"></p>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/40.png" alt="4"></p>
+<hr>
 
 <div class="notices info" ><p>Next, we will add <strong>EventBridge</strong> to ensure that data is continuously updated in real-time into the <strong>S3 Bucket</strong> and <strong>Snowflake</strong>.</p>
 </div>
 
-<hr>
 <h3 id="adding-eventbridge-cloudwatch-events">Adding EventBridge (CloudWatch Events)</h3>
 <p><strong>1.</strong> Go back to AWS and select <strong>Lambda</strong></p>
 <ul>
@@ -1105,19 +1158,19 @@ on_error = CONTINUE;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739689574"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739700923"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739689574"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739689574"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739700923"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739689574" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739689574"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739700923" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739700923"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
