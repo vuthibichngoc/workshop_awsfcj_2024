@@ -12,21 +12,21 @@
     <title>Loading Data from S3 to Snowflake :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739700923" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739707924" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739707924" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739700923" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739707924" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739707924"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -407,6 +407,130 @@
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop_awsfcj_2024/5-portfwd/5.4/" title="Adding EventBridge (CloudWatch Events)" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop_awsfcj_2024/5-portfwd/5.4/">
+           <b> 5. </b> Adding EventBridge (CloudWatch Events)
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop_awsfcj_2024/5-portfwd/5.1/" title="Create IAM Role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop_awsfcj_2024/5-portfwd/5.1/">
+           <b> 5. </b> Create IAM Role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop_awsfcj_2024/5-portfwd/5.3/" title="Data Charts in Snowflake" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop_awsfcj_2024/5-portfwd/5.3/">
+           <b> 5. </b> Data Charts in Snowflake
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop_awsfcj_2024/5-portfwd/5.2/" title="Upload data to Snowflake" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop_awsfcj_2024/5-portfwd/5.2/">
+           <b> 5. </b> Upload data to Snowflake
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -589,10 +713,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#create-an-iam-role-to-allow-snowflake-access-to-s3">Create an IAM Role to allow Snowflake access to S3</a></li>
-        <li><a href="#create-a-database-in-snowflake">Create a Database in Snowflake</a></li>
-        <li><a href="#observing-data-in-snowflake">Observing Data in Snowflake</a></li>
-        <li><a href="#adding-eventbridge-cloudwatch-events">Adding EventBridge (CloudWatch Events)</a></li>
+        <li><a href="#content">Content:</a></li>
       </ul>
     </li>
   </ul>
@@ -620,282 +741,18 @@
 
 
 
-	
+	<p>In the previous section, we had stock data stored as daily <code>.csv</code> files in an <strong>S3 Bucket</strong>. Now, we will upload it to <strong>Snowflake</strong> for easier visualization, usage, and management.</p>
+
 <div class="notices tip" ><p>This section requires a Snowflake account, so make sure you have one.</p>
 </div>
 
-<p>In the previous section, we had stock data stored as daily <code>.csv</code> files in an <strong>S3 Bucket</strong>. Now, we will upload it to <strong>Snowflake</strong> for easier visualization, usage, and management.</p>
-<h3 id="create-an-iam-role-to-allow-snowflake-access-to-s3">Create an IAM Role to allow Snowflake access to S3</h3>
-<p><strong>1.</strong> In <strong>AWS Management Console</strong>, search for the <a href="https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/home"><strong>IAM</strong></a> service and select it.</p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.1.png" alt="IAM1"></p>
-<p><strong>2.</strong> At <strong>Step 01</strong></p>
+<h3 id="content">Content:</h3>
 <ul>
-<li><strong>Trusted entity type</strong>: <strong>AWS account</strong></li>
-<li><strong>An AWS account</strong>: <strong>This account</strong></li>
-<li><strong>Next</strong></li>
+<li><a href="/workshop_awsfcj_2024/5-portfwd/5.1/">Create IAM Role</a></li>
+<li><a href="/workshop_awsfcj_2024/5-portfwd/5.2/">Upload data to Snowflake</a></li>
+<li><a href="/workshop_awsfcj_2024/5-portfwd/5.3/">Data Charts in Snowflake</a></li>
+<li><a href="/workshop_awsfcj_2024/5-portfwd/5.4/">Adding EventBridge (CloudWatch Events)</a></li>
 </ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/1.png" alt="4"></p>
-<p><strong>3.</strong> At <strong>Step 02</strong></p>
-<ul>
-<li>Grant this role the <strong>AmazonS3FullAccess</strong> permission</li>
-<li><strong>Next</strong></li>
-</ul>
-<p><strong>4.</strong> At <strong>Step 03</strong></p>
-<ul>
-<li><strong>Role name</strong>: <code>snowflake-stock-prices</code></li>
-<li>Review the details</li>
-<li><strong>Create role</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/2.png" alt="4"></p>
-
-<div class="notices tip" ><p>Remember to save the ARN of this role for the next step.</p>
-</div>
-
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/23.png" alt="4"></p>
-<hr>
-<h3 id="create-a-database-in-snowflake">Create a Database in Snowflake</h3>
-<p><strong>1.</strong> Go to <a href="https://app.snowflake.com/">Snowflake</a></p>
-<ul>
-<li>Log in with the created account.</li>
-</ul>
-<p><strong>2.</strong> Select <strong>Create</strong> - <strong>SQL worksheets</strong></p>
-<ul>
-<li>Run the following commands:</li>
-</ul>
-<p><code>CREATE DATABASE STOCK_PRICES;</code></p>
-<p><code>USE DATABASE STOCK_PRICES;</code></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/3.png" alt="4"></p>
-<ul>
-<li><strong>Database created successfully.</strong></li>
-</ul>
-<p><strong>3.</strong> Create the <strong>stock_prices_data</strong> table in <strong>Snowflake</strong> and load data into it.</p>
-<p><strong>a.</strong> Create the stock data table.</p>
-<pre tabindex="0"><code>CREATE OR REPLACE TABLE stock_prices_data(
-    low          VARCHAR(128),  
-    symbol       VARCHAR(128),
-    timestamp    VARCHAR(128),
-    open         VARCHAR(128),
-    volume       VARCHAR(128),
-    high         VARCHAR(128),
-    close        VARCHAR(128),
-    date         VARCHAR(128)
-);
-</code></pre><p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/4.png" alt="4"></p>
-<ul>
-<li><strong>Table created successfully in Snowflake.</strong></li>
-</ul>
-<p><strong>b.</strong> Create an <strong>Integration Object</strong> to connect with S3.</p>
-
-<div class="notices info" ><p>An <strong>Integration Object</strong> in Snowflake is an external connection object that allows Snowflake to communicate with other services such as S3.</p>
-</div>
-
-<p>Run the following command to create an <strong>Integration Object</strong> to connect with S3.</p>
-<pre tabindex="0"><code>
-create or replace storage integration s3_int
-  type = external_stage
-  storage_provider = s3
-  enabled = true
-  storage_aws_role_arn = &#39;&lt;&lt;Your role ARN&gt;&gt;&#39;
-  storage_allowed_locations = (&#39;s3://data-stock-prices-01/snowflake/&#39;);
-</code></pre>
-<div class="notices tip" ><p>Enter the ARN of the IAM Role created in the previous step to allow Snowflake to access S3, and modify the S3 path to match your bucket name.</p>
-</div>
-
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.png" alt="4"></p>
-<p><strong>c.</strong> Check detailed information about <strong>Storage Integration</strong>.</p>
-
-<div class="notices info" ><p><strong>Storage Integration</strong> is an object in Snowflake used to securely and automatically connect with external storage services like AWS S3. Instead of providing an access key and secret key to access S3, Snowflake allows the use of AWS IAM Roles to grant access securely.</p>
-</div>
-
-<p>Run the command:<br>
-<code>DESC INTEGRATION s3_int;</code><br>
-to check detailed information about <strong>Storage Integration</strong>.</p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/6.png" alt="4"></p>
-
-<div class="notices note" ><p>Save the <strong>property_value</strong> of the following <strong>properties</strong>: <strong>STORAGE_AWS_IAM_USER_ARN</strong>, <strong>STORAGE_AWS_ROLE_ARN</strong>, <strong>STORAGE_AWS_EXTERNAL_ID</strong></p>
-</div>
-
-<ul>
-<li>Go back to <a href="https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/home"><strong>IAM</strong></a> - select <strong>Roles</strong> - choose the role created in the previous step.</li>
-<li>Select <strong>Trust relationship</strong> - <strong>Edit trust policy</strong></li>
-<li>Enter the <strong>property_value</strong> of <strong>STORAGE_AWS_ROLE_ARN</strong> saved earlier after <strong>&ldquo;AWS&rdquo;</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/7.png" alt="4"></p>
-<p>Then, continue by selecting <strong>Add condition</strong></p>
-<ul>
-<li>Fill in the following information:</li>
-</ul>
-<p>&ndash; <strong>Condition key</strong>: <code>sts:ExternalId</code></p>
-<p>&ndash; <strong>Qualifier</strong>: <code>Default</code></p>
-<p>&ndash; <strong>Operator</strong>: <code>StringEquals</code></p>
-<p>&ndash; <strong>Value</strong>: Enter the <strong>property_value</strong> of <strong>STORAGE_AWS_EXTERNAL_ID</strong> saved earlier.</p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/8.png" alt="4"></p>
-<ul>
-<li><strong>Add condition</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/9.png" alt="4"></p>
-<p><strong>d.</strong> Create <strong>File Format</strong> to read CSV files</p>
-<p>Run the following command:</p>
-<pre tabindex="0"><code>create or replace file format csv_format
-                    type = csv
-                    field_delimiter = &#39;,&#39;
-                    skip_header = 1
-                    null_if = (&#39;NULL&#39;, &#39;null&#39;)
-                    empty_field_as_null = true;
-</code></pre><p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/10.png" alt="4"></p>
-<p><strong>e.</strong> Create <strong>External Stage</strong> to connect with <strong>S3</strong></p>
-
-<div class="notices info" ><p><strong>External Stage</strong> is an external storage repository used by Snowflake to retrieve data from cloud storage services like Amazon S3, Google Cloud Storage, or Azure Blob Storage. It allows Snowflake to read and write data directly from/to external storage without needing to load data into Snowflake first.</p>
-</div>
-
-<p>Run the following command to create an <strong>External Stage</strong> to connect with the <strong>S3</strong> bucket created earlier.</p>
-<pre tabindex="0"><code>create or replace stage ext_csv_stage
-  URL = &#39;s3://data-stock-prices-01/snowflake/&#39;
-  STORAGE_INTEGRATION = s3_int
-  file_format = csv_format;
-</code></pre><p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/11.png" alt="4"></p>
-<p><strong>f.</strong> Create <strong>Pipe</strong> to automatically load data</p>
-
-<div class="notices info" ><p>A <strong>Pipe</strong> in Snowflake is a mechanism to automate data loading from an External Stage (S3) into a table in Snowflake. It uses Snowpipe, a Snowflake service that automatically detects new files in cloud storage (e.g., S3) and loads data into the table immediately without requiring a manual <code>COPY INTO</code> command.</p>
-</div>
-
-<ul>
-<li>Go back to <a href="https://us-east-1.console.aws.amazon.com/iam/home?region=us-east-1#/home"><strong>IAM</strong></a> - <strong>Roles</strong> - select the role created in the previous step.</li>
-<li>Select <strong>Trust relationship</strong> - <strong>Edit trust policy</strong></li>
-<li>Modify the content and enter the <strong>property_value</strong> of <strong>STORAGE_AWS_IAM_USER_ARN</strong> saved earlier after <strong>&ldquo;AWS&rdquo;</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/13.png" alt="4"></p>
-<p>Run the following command.</p>
-<pre tabindex="0"><code>create or replace pipe mypipe auto_ingest=true as
-copy into stock_price_data
-from @ext_csv_stage
-on_error = CONTINUE;
-</code></pre><p><strong>g.</strong> Execute the command <code>show pipes</code> to check <strong>pipe</strong></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/15.png" alt="4"></p>
-
-<div class="notices note" ><p>Please save the information displayed in the <strong>notification_channel</strong> column.</p>
-</div>
-
-<ul>
-<li>Go back to <a href="https://us-east-1.console.aws.amazon.com/s3/home?region=us-east-1">S3</a></li>
-<li>Select the <strong>bucket</strong> used to store data that will be uploaded to <strong>Snowflake</strong></li>
-<li>Navigate to <strong>Event notifications</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/16.png" alt="4"></p>
-<ul>
-<li>Click <strong>Create event notification</strong></li>
-<li>In <strong>General configuration</strong></li>
-</ul>
-<p>&ndash; <strong>Event name</strong>: <code>stock-price-event</code></p>
-<ul>
-<li>In <strong>Event types</strong></li>
-</ul>
-<p>&ndash; Select <strong>All object create events</strong></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/17.png" alt="4"></p>
-<ul>
-<li>In <strong>Destination</strong></li>
-</ul>
-<p>&ndash; <strong>Destination</strong>: <strong>SQS queue</strong></p>
-<p>&ndash; <strong>SQS queue</strong>: enter the <strong>notification_channel</strong> information that was saved earlier.</p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/18.png" alt="4"></p>
-<ul>
-<li><strong>Save changes</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/19.png" alt="4"></p>
-<p><strong>Event notification</strong> has been successfully created.</p>
-<ul>
-<li>Go back to <a href="https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/discover?tab=code"><strong>Lambda</strong></a></li>
-<li>Select <strong>Function</strong></li>
-<li>Select the first function created to insert data into <strong>DynamoDB</strong> (in this case, the function is named <strong>fetch_code</strong>)</li>
-<li>Navigate to <strong>Code</strong></li>
-<li>Select the <strong>Test event</strong> that was used before - choose <strong>Edit test event</strong> - then select <strong>Invoke</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/20.png" alt="4"><br>
-<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/21.png" alt="4"></p>
-<p><strong>4.</strong> <strong>Results</strong></p>
-<ul>
-<li>Execute the command <code>select * from stock_price_data;</code> to check if the data has been loaded from <strong>S3</strong> into <strong>Snowflake</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/22.png" alt="4"></p>
-<p><strong>The data from S3 has been successfully added to Snowflake.</strong></p>
-<h3 id="observing-data-in-snowflake">Observing Data in Snowflake</h3>
-<p>Select <strong>Chart</strong> on the <strong>result</strong> bar in <strong>Snowflake</strong> after running the query:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> stock_price_data;
-</span></span></code></pre></div><p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/25.png" alt="4"></p>
-<ul>
-<li>Here, you can create charts based on the data stored in the table.</li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/26.png" alt="4"></p>
-<p>The sections include: <strong>Chart type</strong>, <strong>Data</strong>, and <strong>Appearance</strong></p>
-<h4 id="1-chart-type"><strong>1. Chart type</strong></h4>
-
-<div class="notices info" ><p><strong>Chart type</strong> allows users to select different types of charts to visualize data.</p>
-</div>
-
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/27.png" alt="4"></p>
-<p>&ndash; <strong>Line Chart</strong></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/28.png" alt="4"><br>
-<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/29.png" alt="4"></p>
-<p>&ndash; <strong>Bar Chart</strong></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/30.png" alt="4"><br>
-<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/31.png" alt="4"></p>
-<p>&ndash; <strong>Scatter Plot</strong></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/32.png" alt="4"></p>
-<p>&ndash; <strong>Heatgrid</strong></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/33.png" alt="4"></p>
-<p>&ndash; <strong>Scorecard</strong></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/34.png" alt="4"></p>
-<h4 id="2-data"><strong>2. Data</strong></h4>
-
-<div class="notices info" ><p><strong>Data</strong> refers to the information stored in a table or retrieved through a query. This serves as the source for chart visualization.</p>
-</div>
-
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/35.png" alt="4"></p>
-<p>It allows you to select specific columns, aggregate values (sum, max, min, etc.), remove columns from the chart, or add new ones.</p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/36.png" alt="4"></p>
-<h4 id="3-appearance"><strong>3. Appearance</strong></h4>
-
-<div class="notices info" ><p><strong>Appearance</strong> relates to the visual representation of the chart. It does not affect the data but enhances readability and interpretation.</p>
-</div>
-
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/37.png" alt="4"></p>
-<p><strong>Example</strong>: Adding column names and legend to the chart.</p>
-<ul>
-<li>Before adding:</li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/39.png" alt="4"></p>
-<ul>
-<li>After adding:</li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/38.png" alt="4"></p>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/40.png" alt="4"></p>
-<hr>
-
-<div class="notices info" ><p>Next, we will add <strong>EventBridge</strong> to ensure that data is continuously updated in real-time into the <strong>S3 Bucket</strong> and <strong>Snowflake</strong>.</p>
-</div>
-
-<h3 id="adding-eventbridge-cloudwatch-events">Adding EventBridge (CloudWatch Events)</h3>
-<p><strong>1.</strong> Go back to AWS and select <strong>Lambda</strong></p>
-<ul>
-<li>Choose <strong>Function</strong></li>
-<li>Select the function <strong>fetch_code</strong></li>
-</ul>
-<p><strong>2.</strong> Add an EventBridge (CloudWatch Events) trigger</p>
-<ul>
-<li>Go to <strong>Configuration</strong> - select <strong>Trigger</strong></li>
-<li>Click <strong>Add trigger</strong></li>
-<li><strong>Select a source</strong>: <code>EventBridge CloudWatch Events</code></li>
-<li><strong>Rule</strong>: Create a new rule</li>
-<li><strong>Rule name</strong>: <code>every_days</code></li>
-<li><strong>Schedule expression</strong>: <code>rate(1 day)</code></li>
-<li>Click <strong>Add</strong></li>
-</ul>
-<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png" alt="4"><br>
-<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png" alt="4"></p>
-
-<div class="notices info" ><p>Once completed, the data will be updated and automatically sent to <strong>DynamoDB, S3, and Snowflake</strong> daily. Each day, you can check the newly updated stock information.</p>
-</div>
-
 
 
 
@@ -1111,6 +968,24 @@ on_error = CONTINUE;
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -1122,8 +997,56 @@ on_error = CONTINUE;
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -1148,7 +1071,7 @@ on_error = CONTINUE;
 			<a class="nav nav-prev" href="/workshop_awsfcj_2024/4-s3log/4.2-creates3bucket/" title="Store Data into S3 Bucket"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/workshop_awsfcj_2024/6-cleanup/" title="Clean up resources" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop_awsfcj_2024/5-portfwd/5.4/" title="Adding EventBridge (CloudWatch Events)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1158,19 +1081,19 @@ on_error = CONTINUE;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739700923"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739700923"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739700923"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739700923"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739700923"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739707924"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739707924"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739707924"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739707924"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739707924"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739707924"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739700923"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739700923"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739700923"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739707924"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739707924"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739707924"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739700923" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739700923"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739707924" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739707924"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
