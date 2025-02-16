@@ -20,7 +20,7 @@ Chúng ta sẽ tiến hành các bước sau để xóa các tài nguyên chúng
 3. Tìm và chọn cơ sở dữ liệu đã tạo trước đó.  
 4. Chạy lệnh SQL sau trong **SQL worksheet**:  
    ```sql
-   DROP DATABASE FCJ_STOCK_PRICES;
+   DROP DATABASE STOCK_PRICES;
    ```
 5. Xác nhận rằng cơ sở dữ liệu đã được xóa thành công.  
 

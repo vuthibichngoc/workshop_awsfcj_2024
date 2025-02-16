@@ -20,7 +20,7 @@ To fully remove the resources created during this project, follow the structured
 3. Locate the database created earlier.  
 4. Run the following command in the SQL worksheet:  
    ```sql
-   DROP DATABASE FCJ_STOCK_PRICES;
+   DROP DATABASE STOCK_PRICES;
    ```
 5. Confirm that the database has been successfully removed.  
 
