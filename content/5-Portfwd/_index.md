@@ -194,7 +194,7 @@ create or replace stage ext_csv_stage
 
 {{% notice info %}}  
 
-A **Pipe** in Snowflake is a mechanism to automate data loading from an External Stage (S3) into a table in Snowflake. It uses Snowpipe, a Snowflake service that automatically detects new files in cloud storage (e.g., S3) and loads data into the table immediately without requiring a manual `COPY INTO` command.  
+**Pipe** in Snowflake is a mechanism that enables continuous data loading from an External Stage (S3) into a table in Snowflake. It utilizes **Snowpipe**, a Snowflake service that automatically detects new files in cloud storage (e.g., S3) and loads the data into the table without requiring manual execution of the `COPY INTO` command.  
 
 {{% /notice %}}  
 
@@ -359,9 +359,9 @@ It allows you to select specific columns, aggregate values (sum, max, min, etc.)
 
 {{% notice info %}}  
 
-Next, we will add **EventBridge** to ensure that data is continuously updated in real-time into the **S3 Bucket** and **Snowflake**.  
+Next, we will integrate **EventBridge** to ensure the data is continuously updated in real-time.  
 
-{{% /notice %}}  
+{{% /notice %}} 
 
 ### Adding EventBridge (CloudWatch Events) 
 
@@ -384,7 +384,5 @@ Next, we will add **EventBridge** to ensure that data is continuously updated in
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)  
 
 {{% notice info %}}  
-
-Once completed, the data will be updated and automatically sent to **DynamoDB, S3, and Snowflake** daily. Each day, you can check the newly updated stock information.  
-
+Once completed, the data will be updated and stored continuously on a daily basis.  
 {{% /notice %}}

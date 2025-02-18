@@ -194,7 +194,7 @@ create or replace stage ext_csv_stage
 
 {{% notice info %}}
 
-**Pipe** trong Snowflake là một cơ chế tự động hóa quá trình nạp dữ liệu từ External Stage (S3) vào bảng trong Snowflake. Nó sử dụng Snowpipe, một dịch vụ của Snowflake giúp tự động phát hiện khi có tệp mới trong kho lưu trữ đám mây (ví dụ: S3) và nạp dữ liệu vào bảng ngay lập tức mà không cần chạy lệnh COPY INTO thủ công.
+**Pipe** trong Snowflake là một cơ chế giúp quá trình nạp dữ liệu từ External Stage (S3) vào bảng trong Snowflake được thực hiện liên tục. Nó sử dụng Snowpipe, một dịch vụ của Snowflake giúp tự động phát hiện khi có tệp mới trong kho lưu trữ đám mây (ví dụ: S3) và nạp dữ liệu vào bảng mà không cần chạy lệnh COPY INTO thủ công.
 
 {{% /notice %}}
 
@@ -363,7 +363,7 @@ Có thể loại bỏ cột dữ liệu đó khỏi biểu đồ, cũng có th�
 
 {{% notice info %}}
 
-Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ được cập nhật liên tục theo thời gian thực vào **S3 Bucket** và **Snowflake**.
+Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ được cập nhật liên tục theo thời gian thực.
 
 {{% /notice %}}
 
@@ -389,5 +389,5 @@ Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ �
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)
 
 {{% notice info %}}
-Hoàn thành xong, dữ liệu sẽ được cập nhật và đưa vào DynamoDB, S3 và Snowflake một cách liên tục theo từng ngày. Mỗi ngày, có thể kiểm tra các thông tin chứng khoán đã được cập nhật thêm theo ngày.
+Hoàn thành xong, dữ liệu sẽ được cập nhật và đưa vào lưu trữ một cách liên tục theo từng ngày.
 {{% /notice %}}
