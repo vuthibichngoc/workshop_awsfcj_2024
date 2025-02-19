@@ -388,6 +388,10 @@ Tiếp theo ta sẽ thực hiện thêm **EventBridge** để dữ liệu sẽ �
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)
 
+{{% notice note %}}
+Thực hiện tương tự với Lambda funtion còn lại.
+{{% /notice %}}
+
 {{% notice info %}}
 Hoàn thành xong, dữ liệu sẽ được cập nhật và đưa vào lưu trữ một cách liên tục theo từng ngày.
 {{% /notice %}}

@@ -383,6 +383,10 @@ Next, we will integrate **EventBridge** to ensure the data is continuously updat
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png)  
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png)  
 
+{{% notice note %}}  
+Do the same for the remaining Lambda function.  
+{{% /notice %}}
+
 {{% notice info %}}  
 Once completed, the data will be updated and stored continuously on a daily basis.  
 {{% /notice %}}
