@@ -14,11 +14,14 @@ Bạn cần có tài khoản AWS và Snowflake để thực hiện bài thực h
 
 ### Nguồn dữ liệu chứng khoán
 
-Được lấy xuống trực tiếp thông qua trang web [Alphavantage](https://www.alphavantage.co/) và được cập nhật liên tục.
+Được lấy xuống trực tiếp thông qua trang web [Twelvedata](https://twelvedata.com/). 
+
+Cần thêm một tài khoản đăng nhập vào Twelvedata để lấy API key giúp đưa dữ liệu vào lưu trữ trong DynamoDB. 
 
 
 ### Nội dung
   - [Tạo tài khoản IAM User](2.1-createec2/)
   - [Tạo tài khoản Snowflake](2.2-createiamrole/)
+  - [Tạo tài khoản Twelvedata](2.3-createtweldata/)
 
   

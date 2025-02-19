@@ -63,12 +63,16 @@ Select the latest version in the version section.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png)
 
-**4.** Insert data from [Alphavantage](https://www.alphavantage.co/) into the table created in **DynamoDB**.
+**4.** Insert data from [Twelvedata](https://twelvedata.com/) into the table created in **DynamoDB**.
 
 - Go to the **Code** section in the options bar.
 - Add the [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) in the **Code source** area.
-- Click **Test** - **Create new test event**, enter the necessary information, and click **Save**.
+- Remember to replace **"apikey"** with the **API key** saved from the step [Create a Twelvedata Account](https://vuthibichngoc.github.io/workshop_awsfcj_2024/2.3-createtweldata/).
+
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/1.png)
+
 - Click **Deploy**
+- Click **Test** - **Create new test event**, enter the necessary information, and click **Save**.
 - Execute the code.
 - **Result after execution**.
 
@@ -82,4 +86,4 @@ Select the latest version in the version section.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.7.png)
 
-- The data has been fetched from [Alphavantage](https://www.alphavantage.co/) and stored in the **stock_prices** table created earlier in **DynamoDB**.
+- The data has been fetched from [Twelvedata](https://twelvedata.com/) and stored in the **stock_prices** table created earlier in **DynamoDB**.

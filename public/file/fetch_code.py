@@ -2,21 +2,26 @@ import json
 import requests
 import boto3
 from decimal import Decimal
-from datetime import datetime
 
-dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table("<< your table name in dynamodb >>")
+dynamodb = boto3.resource("dynamodb")
+table = dynamodb.Table("stock_prices")
+
 
 def get_stock_data(symbol):
-    api_url = "https://www.alphavantage.co/query"
+    api_url = "https://api.twelvedata.com/time_series"
     params = {
-        "function": "TIME_SERIES_DAILY_ADJUSTED",
-        "symbol": symbol,  
-        "apikey": "demo"  
+        "symbol": symbol,
+        "interval": "1day",
+        "apikey": "YOUR_TWELVE_DATA_API_KEY",  
+        "outputsize": "30",  
+        "format": "JSON"
     }
+    
     response = requests.get(api_url, params=params)
     data = response.json()
+    
     return data
+
 
 def lambda_handler(event, context):
     symbols = ["MSFT"]  
@@ -24,21 +29,19 @@ def lambda_handler(event, context):
 
     for symbol in symbols:
         data = get_stock_data(symbol)
-        time_series = data.get("Time Series (Daily)", {})  # Đã sửa lỗi
+        time_series = data.get("values", [])  
 
-        for time_stamp, metrics in time_series.items():
+        for entry in time_series:
             item = {
-                'symbol': symbol,
-                'timestamp': time_stamp,
-                'open': metrics['1. open'],
-                'high': metrics['2. high'],
-                'low': metrics['3. low'],
-                'close': metrics['4. close'],
-                'volume': metrics['6. volume']  
+                "symbol": symbol,
+                "timestamp": entry["datetime"],  
+                "open": Decimal(entry["open"]),
+                "high": Decimal(entry["high"]),
+                "low": Decimal(entry["low"]),
+                "close": Decimal(entry["close"]),
+                "volume": int(entry["volume"])  
             }
 
-           
-            item = json.loads(json.dumps(item), parse_float=Decimal)
 
             table.put_item(Item=item)
 

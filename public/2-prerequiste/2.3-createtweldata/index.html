@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/workshop_awsfcj_2024/images/favicon.png" type="image/png">
 
-    <title>Collecting and Storing Data in DynamoDB :: AWS System Manager</title>
+    <title>Create Twelvedata Account :: AWS System Manager</title>
 
     
     <link href="/workshop_awsfcj_2024/css/nucleus.css?1739949978" rel="stylesheet">
@@ -36,7 +36,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/workshop_awsfcj_2024/3-accessibilitytoinstances/">
+  <body class="" data-url="/workshop_awsfcj_2024/2-prerequiste/2.3-createtweldata/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -114,7 +114,7 @@
   
     
     <li data-nav-id="/workshop_awsfcj_2024/2-prerequiste/" title="Preparation " class="dd-item 
-        
+        parent
         
         
         ">
@@ -202,7 +202,7 @@
     
     <li data-nav-id="/workshop_awsfcj_2024/2-prerequiste/2.3-createtweldata/" title="Create Twelvedata Account" class="dd-item 
         
-        
+        active
         
         ">
       <a href="/workshop_awsfcj_2024/2-prerequiste/2.3-createtweldata/">
@@ -237,7 +237,7 @@
     
     <li data-nav-id="/workshop_awsfcj_2024/3-accessibilitytoinstances/" title="Collecting and Storing Data in DynamoDB" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/workshop_awsfcj_2024/3-accessibilitytoinstances/">
@@ -502,7 +502,7 @@
                   
                     
                     
-                      <option id="en" value="https://vuthibichngoc.github.io/workshop_awsfcj_2024/3-accessibilitytoinstances/" selected>English</option>
+                      <option id="en" value="https://vuthibichngoc.github.io/workshop_awsfcj_2024/2-prerequiste/2.3-createtweldata/" selected>English</option>
                     
                   
               
@@ -516,7 +516,7 @@
                   
                     
                     
-                      <option id="vi" value="https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/3-accessibilitytoinstances/">Tiếng Việt</option>
+                      <option id="vi" value="https://vuthibichngoc.github.io/workshop_awsfcj_2024/vi/2-prerequiste/2.3-createtweldata/">Tiếng Việt</option>
                     
                   
               
@@ -602,7 +602,13 @@
             
           
           
-            <a href='/workshop_awsfcj_2024/'>Building a Stock Data Processing and Storage System using AWS Lambda, DynamoDB, S3, and Snowflake</a> > Collecting and Storing Data in DynamoDB
+            
+            
+          
+          
+            <a href='/workshop_awsfcj_2024/'>Building a Stock Data Processing and Storage System using AWS Lambda, DynamoDB, S3, and Snowflake</a> > <a href='/workshop_awsfcj_2024/2-prerequiste/'>Preparation </a> > Create Twelvedata Account
+          
+        
           
         
           
@@ -617,7 +623,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#content">Content</a></li>
+        <li><a href="#create-a-twelvedata-account">Create a Twelvedata Account</a></li>
       </ul>
     </li>
   </ul>
@@ -637,7 +643,7 @@
           
             <h1>
               
-              Collecting and Storing Data in DynamoDB
+              Create Twelvedata Account
             </h1>
           
 
@@ -645,10 +651,28 @@
 
 
 
-	<p>In this step, we will retrieve stock data from the API and store it in a table that will be created in this step in <strong>DynamoDB</strong>.</p>
-<h3 id="content">Content</h3>
-<p>3.1. <a href="/workshop_awsfcj_2024/3-accessibilitytoinstances/3.1-public-instance/">Create table in DynamoDB</a> <br>
-3.2. <a href="/workshop_awsfcj_2024/3-accessibilitytoinstances/3.2-private-instance/">Storing Data in DynamoDB</a></p>
+	<h3 id="create-a-twelvedata-account">Create a Twelvedata Account</h3>
+<p>This section covers creating an account on <a href="https://twelvedata.com/">Twelvedata</a> to obtain an API Key for loading data into the next steps.</p>
+<p><strong>1.</strong> Sign in to <strong>Twelvedata</strong></p>
+<ul>
+<li>Navigate to <a href="https://twelvedata.com/">Twelvedata</a></li>
+<li>On the homepage, click <strong>Sign in</strong></li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.1.png" alt="sf"><br>
+<img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.2.png" alt="sf"></p>
+<ul>
+<li>There are multiple sign-in options; you can choose <strong>Sign in with Google</strong>.</li>
+<li>The homepage interface after a successful login.</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.3.png" alt="sf"></p>
+<ul>
+<li>From the left sidebar, select <strong>API Keys</strong>.</li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/2.prerequisite/2.4.png" alt="sf"></p>
+
+<div class="notices tip" ><p>Copy the <strong>Secret key</strong> to use in the next step.</p>
+</div>
+
 
 
 
@@ -708,6 +732,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -722,6 +747,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -755,6 +783,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -774,6 +803,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -789,9 +820,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -914,10 +942,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/workshop_awsfcj_2024/2-prerequiste/2.3-createtweldata/" title="Create Twelvedata Account"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/workshop_awsfcj_2024/2-prerequiste/2.2-createiamrole/" title="Create Snowflake Account"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/workshop_awsfcj_2024/3-accessibilitytoinstances/3.1-public-instance/" title="Create table in DynamoDB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/workshop_awsfcj_2024/3-accessibilitytoinstances/" title="Collecting and Storing Data in DynamoDB" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -12,10 +12,13 @@ You will need an AWS and Snowflake account to complete this hands-on lab..
 
 To upload data from S3 to Snowflake, you can create a free trial account for 30 days on Snowflake's homepage.
 
-### Stock Data Source
+### Stock Data Source  
 
-The stock data is fetched directly from the website [Alphavantage](https://www.alphavantage.co/) and is updated continuously.
+The data is retrieved directly from the [Twelvedata](https://twelvedata.com/) website.  
 
-### Content
-  - [Create IAM User](2.1-createec2/)
-  - [Create Snowflake Account](2.2-createiamrole/)
+A registered account on Twelvedata is required to obtain an API key for storing data in DynamoDB.  
+
+### Contents  
+- [Create an IAM User](2.1-createec2/)  
+- [Create a Snowflake Account](2.2-createiamrole/)  
+- [Create a Twelvedata Account](2.3-createtweldata/)

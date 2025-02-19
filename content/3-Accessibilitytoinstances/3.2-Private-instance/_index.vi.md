@@ -63,10 +63,14 @@ Phần version hãy chọn version mới nhất.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png)
 
-**4.** Thực hiện đưa dữ liệu từ [Alphavantage](https://www.alphavantage.co/) vào bảng đã tạo trong **DynamoDB**
+**4.** Thực hiện đưa dữ liệu từ [Twelvedata](https://twelvedata.com/) vào bảng đã tạo trong **DynamoDB**
 
 - Đến phần **Code** ở thanh tùy chọn.
 - Thêm đoạn [SourceCode](https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py) vào phần **Code source** 
+- Hãy nhớ sửa lại phần **"apikey"** bằng **API key** đã lưu từ bước [Tạo tài khoản Twelvedata](https://vuthibichngoc.github.io/workshop_awsfcj_2024/2.3-createtweldata/)
+
+![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/1.png)
+
 - Chọn **Deploy**
 - Chọn **Test** - **Create new test event** - điền các thông tin và chọn **Save**
 - Thực hiện chạy đoạn code.
@@ -82,4 +86,4 @@ Phần version hãy chọn version mới nhất.
 
 ![dy](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.7.png)
 
-- Kết quả đã được đưa xuống từ trang web [Alphavantage](https://www.alphavantage.co/) và lưu vào bảng **stock_prices** đã tạo từ trước ở **DynamoDB**
+- Kết quả đã được đưa xuống từ trang web [Twelvedata](https://twelvedata.com/) và lưu vào bảng **stock_prices** đã tạo từ trước ở **DynamoDB**

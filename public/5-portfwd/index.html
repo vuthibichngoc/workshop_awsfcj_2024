@@ -12,21 +12,21 @@
     <title>Loading Data from S3 to Snowflake :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739708891" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739949978" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739708891" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739949978" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739949978"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -179,6 +179,34 @@
         ">
       <a href="/workshop_awsfcj_2024/2-prerequiste/2.2-createiamrole/">
            <b> 2.2 </b> Create Snowflake Account
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop_awsfcj_2024/2-prerequiste/2.3-createtweldata/" title="Create Twelvedata Account" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop_awsfcj_2024/2-prerequiste/2.3-createtweldata/">
+           <b> 2.3 </b> Create Twelvedata Account
           
             <i class="fas fa-check read-icon"></i>
           
@@ -756,7 +784,7 @@ to check detailed information about <strong>Storage Integration</strong>.</p>
 </code></pre><p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/11.png" alt="4"></p>
 <p><strong>f.</strong> Create <strong>Pipe</strong> to automatically load data</p>
 
-<div class="notices info" ><p>A <strong>Pipe</strong> in Snowflake is a mechanism to automate data loading from an External Stage (S3) into a table in Snowflake. It uses Snowpipe, a Snowflake service that automatically detects new files in cloud storage (e.g., S3) and loads data into the table immediately without requiring a manual <code>COPY INTO</code> command.</p>
+<div class="notices info" ><p><strong>Pipe</strong> in Snowflake is a mechanism that enables continuous data loading from an External Stage (S3) into a table in Snowflake. It utilizes <strong>Snowpipe</strong>, a Snowflake service that automatically detects new files in cloud storage (e.g., S3) and loads the data into the table without requiring manual execution of the <code>COPY INTO</code> command.</p>
 </div>
 
 <ul>
@@ -871,7 +899,7 @@ on_error = CONTINUE;
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/40.png" alt="4"></p>
 <hr>
 
-<div class="notices info" ><p>Next, we will add <strong>EventBridge</strong> to ensure that data is continuously updated in real-time into the <strong>S3 Bucket</strong> and <strong>Snowflake</strong>.</p>
+<div class="notices info" ><p>Next, we will integrate <strong>EventBridge</strong> to ensure the data is continuously updated in real-time.</p>
 </div>
 
 <h3 id="adding-eventbridge-cloudwatch-events">Adding EventBridge (CloudWatch Events)</h3>
@@ -893,7 +921,7 @@ on_error = CONTINUE;
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png" alt="4"><br>
 <img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png" alt="4"></p>
 
-<div class="notices info" ><p>Once completed, the data will be updated and automatically sent to <strong>DynamoDB, S3, and Snowflake</strong> daily. Each day, you can check the newly updated stock information.</p>
+<div class="notices info" ><p>Once completed, the data will be updated and stored continuously on a daily basis.</p>
 </div>
 
 
@@ -964,6 +992,22 @@ on_error = CONTINUE;
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1158,19 +1202,19 @@ on_error = CONTINUE;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739949978"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739949978"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739708891" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739708891"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739949978" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739949978"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

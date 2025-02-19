@@ -12,21 +12,21 @@
     <title>Lưu dữ liệu vào DynamoDB :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739708891" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739949978" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739708891" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739949978" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739949978"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -179,6 +179,34 @@
         ">
       <a href="/workshop_awsfcj_2024/vi/2-prerequiste/2.2-createiamrole/">
            <b> 2.2 </b> Tạo tài khoản Snowflake
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop_awsfcj_2024/vi/2-prerequiste/2.3-createtweldata/" title="Tạo tài khoản Twelvedata" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop_awsfcj_2024/vi/2-prerequiste/2.3-createtweldata/">
+           <b> 2.3 </b> Tạo tài khoản Twelvedata
           
             <i class="fas fa-check read-icon"></i>
           
@@ -674,10 +702,14 @@
 <li>Chọn <strong>Add permissions</strong></li>
 </ul>
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.5.png" alt="dy"></p>
-<p><strong>4.</strong> Thực hiện đưa dữ liệu từ <a href="https://www.alphavantage.co/">Alphavantage</a> vào bảng đã tạo trong <strong>DynamoDB</strong></p>
+<p><strong>4.</strong> Thực hiện đưa dữ liệu từ <a href="https://twelvedata.com/">Twelvedata</a> vào bảng đã tạo trong <strong>DynamoDB</strong></p>
 <ul>
 <li>Đến phần <strong>Code</strong> ở thanh tùy chọn.</li>
 <li>Thêm đoạn <a href="https://vuthibichngoc.github.io/workshop_awsfcj_2024/file/fetch_code.py">SourceCode</a> vào phần <strong>Code source</strong></li>
+<li>Hãy nhớ sửa lại phần <strong>&ldquo;apikey&rdquo;</strong> bằng <strong>API key</strong> đã lưu từ bước <a href="https://vuthibichngoc.github.io/workshop_awsfcj_2024/2.3-createtweldata/">Tạo tài khoản Twelvedata</a></li>
+</ul>
+<p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/1.png" alt="dy"></p>
+<ul>
 <li>Chọn <strong>Deploy</strong></li>
 <li>Chọn <strong>Test</strong> - <strong>Create new test event</strong> - điền các thông tin và chọn <strong>Save</strong></li>
 <li>Thực hiện chạy đoạn code.</li>
@@ -692,7 +724,7 @@
 </ul>
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/3.connect/3.2.7.png" alt="dy"></p>
 <ul>
-<li>Kết quả đã được đưa xuống từ trang web <a href="https://www.alphavantage.co/">Alphavantage</a> và lưu vào bảng <strong>stock_prices</strong> đã tạo từ trước ở <strong>DynamoDB</strong></li>
+<li>Kết quả đã được đưa xuống từ trang web <a href="https://twelvedata.com/">Twelvedata</a> và lưu vào bảng <strong>stock_prices</strong> đã tạo từ trước ở <strong>DynamoDB</strong></li>
 </ul>
 
 
@@ -762,6 +794,22 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -960,19 +1008,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739949978"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739949978"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739708891" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739708891"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739949978" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739949978"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

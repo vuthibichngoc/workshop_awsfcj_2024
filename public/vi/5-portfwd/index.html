@@ -12,21 +12,21 @@
     <title>Tải dữ liệu từ S3 lên Snowflake :: AWS System Manager</title>
 
     
-    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/theme.css?1739708891" rel="stylesheet">
-    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739708891" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/nucleus.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/fontawesome-all.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hybrid.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/featherlight.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/perfect-scrollbar.min.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/auto-complete.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/atom-one-dark-reasonable.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme.css?1739949978" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/hugo-theme.css?1739949978" rel="stylesheet">
     
-    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739708891" rel="stylesheet">
+    <link href="/workshop_awsfcj_2024/css/theme-workshop.css?1739949978" rel="stylesheet">
     
     
 
-    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery-3.3.1.min.js?1739949978"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -179,6 +179,34 @@
         ">
       <a href="/workshop_awsfcj_2024/vi/2-prerequiste/2.2-createiamrole/">
            <b> 2.2 </b> Tạo tài khoản Snowflake
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop_awsfcj_2024/vi/2-prerequiste/2.3-createtweldata/" title="Tạo tài khoản Twelvedata" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop_awsfcj_2024/vi/2-prerequiste/2.3-createtweldata/">
+           <b> 2.3 </b> Tạo tài khoản Twelvedata
           
             <i class="fas fa-check read-icon"></i>
           
@@ -754,7 +782,7 @@ create or replace storage integration s3_int
 </code></pre><p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/11.png" alt="4"></p>
 <p><strong>f.</strong> Tạo <strong>Pipe</strong> để tự động load dữ liệu</p>
 
-<div class="notices info" ><p><strong>Pipe</strong> trong Snowflake là một cơ chế tự động hóa quá trình nạp dữ liệu từ External Stage (S3) vào bảng trong Snowflake. Nó sử dụng Snowpipe, một dịch vụ của Snowflake giúp tự động phát hiện khi có tệp mới trong kho lưu trữ đám mây (ví dụ: S3) và nạp dữ liệu vào bảng ngay lập tức mà không cần chạy lệnh COPY INTO thủ công.</p>
+<div class="notices info" ><p><strong>Pipe</strong> trong Snowflake là một cơ chế giúp quá trình nạp dữ liệu từ External Stage (S3) vào bảng trong Snowflake được thực hiện liên tục. Nó sử dụng Snowpipe, một dịch vụ của Snowflake giúp tự động phát hiện khi có tệp mới trong kho lưu trữ đám mây (ví dụ: S3) và nạp dữ liệu vào bảng mà không cần chạy lệnh COPY INTO thủ công.</p>
 </div>
 
 <ul>
@@ -871,7 +899,7 @@ on_error = CONTINUE;
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/40.png" alt="4"></p>
 <hr>
 
-<div class="notices info" ><p>Tiếp theo ta sẽ thực hiện thêm <strong>EventBridge</strong> để dữ liệu sẽ được cập nhật liên tục theo thời gian thực vào <strong>S3 Bucket</strong> và <strong>Snowflake</strong>.</p>
+<div class="notices info" ><p>Tiếp theo ta sẽ thực hiện thêm <strong>EventBridge</strong> để dữ liệu sẽ được cập nhật liên tục theo thời gian thực.</p>
 </div>
 
 <h3 id="thêm-eventbridge-cloudwatch-events">Thêm EventBridge (CloudWatch Events)</h3>
@@ -893,7 +921,7 @@ on_error = CONTINUE;
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.6.png" alt="4"></p>
 <p><img src="https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/5.1.7.png" alt="4"></p>
 
-<div class="notices info" ><p>Hoàn thành xong, dữ liệu sẽ được cập nhật và đưa vào DynamoDB, S3 và Snowflake một cách liên tục theo từng ngày. Mỗi ngày, có thể kiểm tra các thông tin chứng khoán đã được cập nhật thêm theo ngày.</p>
+<div class="notices info" ><p>Hoàn thành xong, dữ liệu sẽ được cập nhật và đưa vào lưu trữ một cách liên tục theo từng ngày.</p>
 </div>
 
 
@@ -964,6 +992,22 @@ on_error = CONTINUE;
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1158,19 +1202,19 @@ on_error = CONTINUE;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/clipboard.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/perfect-scrollbar.jquery.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/jquery.sticky.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/featherlight.min.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/highlight.pack.js?1739949978"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/learn.js?1739708891"></script>
-    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739708891"></script>
+    <script src="/workshop_awsfcj_2024/js/modernizr.custom-3.6.0.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/learn.js?1739949978"></script>
+    <script src="/workshop_awsfcj_2024/js/hugo-learn.js?1739949978"></script>
 
-    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739708891" rel="stylesheet" />
-    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739708891"></script>
+    <link href="/workshop_awsfcj_2024/mermaid/mermaid.css?1739949978" rel="stylesheet" />
+    <script src="/workshop_awsfcj_2024/mermaid/mermaid.js?1739949978"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
