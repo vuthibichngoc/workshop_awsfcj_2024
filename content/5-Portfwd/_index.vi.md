@@ -155,6 +155,8 @@ Sau đó, tiếp tục chọn **Add condition**
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/9.png)
 
+- Nhấn vào **Update policy**
+
 
 **d.** Tạo **File Format** để đọc csv 
 
@@ -263,6 +265,7 @@ Hãy lưu thông tin hiển thị trong cột **notification_chanel**.
 - Chọn function đầu tiên được tạo để đưa dữ liệu vào **DynamoDB** (ở đây function của mình có tên là **fetch_code**)
 - Đến phần **Code**.
 - Chọn **Test event** đã sử dụng từ trước - chọn **Edit test event** - chọn **Invoke**.
+- Sau cho chọn **Test** lần nữa.
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/20.png)
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/21.png)

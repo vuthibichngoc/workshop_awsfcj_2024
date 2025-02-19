@@ -6,7 +6,7 @@ chapter : false
 pre : " <b> 4. </b> "
 ---
 
-Ở phần này sẽ thực hiện sử dụng dữ liệu từ bảng **stock_prices** đã tạo trong **DynamoDB** từ bước 3, chuyển đổi chúng thành các file **.cvs** để lưu vào S3.
+Ở phần này sẽ thực hiện sử dụng dữ liệu từ bảng **stock_prices** đã tạo trong **DynamoDB** từ bước 3, chuyển đổi chúng thành các file **.csv** để lưu vào S3.
 
 ### Nội dung:
 

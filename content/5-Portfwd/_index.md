@@ -156,6 +156,8 @@ Then, continue by selecting **Add condition**
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/9.png)  
 
+- Click **Update Policy**
+
 **d.** Create **File Format** to read CSV files  
 
 Run the following command:  
@@ -260,6 +262,7 @@ Please save the information displayed in the **notification_channel** column.
 - Select the first function created to insert data into **DynamoDB** (in this case, the function is named **fetch_code**)  
 - Navigate to **Code**  
 - Select the **Test event** that was used before - choose **Edit test event** - then select **Invoke**  
+- Click **Test** again.
 
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/20.png)  
 ![4](https://vuthibichngoc.github.io/workshop_awsfcj_2024/images/5.fwd/21.png)  

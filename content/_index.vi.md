@@ -8,8 +8,8 @@ chapter : false
 
 ### Tổng quan
 
- Dự án này xây dựng một hệ thống xử lý và lưu trữ dữ liệu chứng khoán tự động bằng cách sử dụng các dịch vụ AWS và Snowflake. Hệ thống thu thập giá cổ phiếu Microsoft từ API thông qua AWS Lambda và lưu trữ vào Amazon DynamoDB. Sau đó, một Lambda function khác xử lý và chuyển đổi dữ liệu thành các file CSV, lưu vào Amazon S3. Cuối cùng, dữ liệu được đưa vào Snowflake để phục vụ phân tích và báo cáo. Hệ thống tận dụng AWS Lambda, DynamoDB, S3 và CloudWatch Events để đảm bảo thu thập, xử lý và lưu trữ dữ liệu hiệu quả. 
-
+ Dự án này xây dựng một hệ thống xử lý và lưu trữ dữ liệu chứng khoán tự động bằng cách sử dụng các dịch vụ AWS và Snowflake. Hệ thống thu thập giá cổ phiếu Microsoft từ API thông qua AWS Lambda và lưu trữ vào Amazon DynamoDB. Sau đó, một Lambda function khác xử lý và chuyển đổi dữ liệu thành các file CSV, lưu vào Amazon S3. Cuối cùng, dữ liệu được đưa vào Snowflake để phục vụ phân tích và báo cáo. Hệ thống tận dụng AWS Lambda, DynamoDB, S3 và EventBrigde (CloudWatch Events) để đảm bảo thu thập, xử lý, lưu trữ dữ liệu hiệu quả và liên tục. 
+ 
 ### Nội dung
 
  1. [Giới thiệu](1-introduce/)

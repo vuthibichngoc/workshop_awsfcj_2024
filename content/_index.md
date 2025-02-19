@@ -7,7 +7,7 @@ chapter : false
 # Building a Stock Data Processing and Storage System using AWS Lambda, DynamoDB, S3, and Snowflake
 
 ### Overall
- This project builds an automated stock data processing and storage system using AWS services and Snowflake. It retrieves Microsoft stock prices via an API using AWS Lambda and stores the data in Amazon DynamoDB. Another Lambda function processes and converts the data into CSV files, which are then stored in Amazon S3. Finally, the data is loaded into Snowflake for further analysis and reporting. This system leverages AWS Lambda, DynamoDB, S3, and CloudWatch Events to ensure efficient data collection, transformation, and storage. 
+ This project builds an automated stock data processing and storage system using AWS services and Snowflake. It retrieves Microsoft stock prices via an API using AWS Lambda and stores the data in Amazon DynamoDB. Another Lambda function processes and converts the data into CSV files, which are then stored in Amazon S3. Finally, the data is loaded into Snowflake for further analysis and reporting. The system leverages AWS Lambda, DynamoDB, S3, and EventBridge (CloudWatch Events) to ensure efficient and continuous data collection, processing, and storage. 
 
 ### Content
  1. [Introduction ](1-introduce/)
